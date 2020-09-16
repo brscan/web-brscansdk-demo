@@ -1,4 +1,4 @@
-# web-brscansdk-demo
+# BrScanSDK WEB
 
 O objetivo deste DEMO é dar uma visão técnica do processo teste de prova de vida, captura de selfie e captura do documento de identificação do cliente, suas dependências e seus meios de implementação em sistemas terceiros.
 
