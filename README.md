@@ -47,7 +47,7 @@ O componente deve ser inicializado com a seguinte chamada:
 
 ```javascript
 var selfie = new Selfie(
-     chave,
+     licenca,
      document.getElementById('selfieContainer'),
         (selfie, dados) => {
 	         console.log("Callback de sucesso");
@@ -84,7 +84,7 @@ As dependências e artefatos do componente devem ser importados no Header da pá
 O componente deve ser inicializado com a seguinte chamada:
 ```javascript
 var documento = new Documento(
-   chave,
+   licenca,
    document.getElementById(documentoContainer'),
    (arrayDocumentosBlob, dados) => {
 	    console.log("Callback de sucesso");
@@ -116,7 +116,7 @@ O componente deve ser inicializado com a seguinte chamada:
 
 ```javascript
 var faceMatch = new FaceMatch(
-  chave,
+  licenca,
   documentoBlob,
   selfieBlob,
   (dados) => {
