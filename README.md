@@ -10,14 +10,26 @@ Para o correto funcionamento do componente, o utilizador precisa estar conectado
 
 As soluções aqui apresentadas não se propõe à tratar tecnicamente documentos que originalmente não estejam em condições adequadas de captura (estado de conservação, envolvidos sob invólucros plásticos, etc.).
 
+### Pré requisitos
+	Os seguintes browsers são suportados pelos componentes:
+
+- Chrome >= 52
+- Safari >= 11
+- Firefox >= 36
+- Edge >= 12
+
+	Os seguintes sistemas operacionais são suportados pelos componentes:
+
+- Windows >= 8
+- Mac OSX >= 10.0
+- Android >= 5
+- iOS >= 10
+
 ## As premissas para utilização dos componentes são:
-  •	Para o uso dos componentes é necessário ter uma licença válida, gerada pela BrScan;
-  
-  •	Para a utilização dos componentes em modo mobile (smartphones e tablets) o aparelho deverá sempre estar no modo vertical;
-  
-  •	Um alerta é exibido em tela cheia ao usuário informando para rotacionar o aparelho caso ele se encontre na horizontal;
-  
-  •	Os componentes em HTML (div) deverão estar ocupando toda a tela do aparelho (width 100%, height 100%) para que os componentes possam ser posicionados corretamente nas várias resoluções disponíveis.
+- Para o uso dos componentes é necessário ter uma licença válida, gerada pela BrScan;
+- Para a utilização dos componentes em modo mobile (smartphones e tablets) o aparelho deverá sempre estar no modo vertical;
+- Um alerta é exibido em tela cheia ao usuário informando para rotacionar o aparelho caso ele se encontre na horizontal;
+- Os componentes em HTML (div) deverão estar ocupando toda a tela do aparelho (width 100%, height 100%) para que os componentes possam ser posicionados corretamente nas várias resoluções disponíveis.
 
 ## Integração com o Componente de Captura de Selfie
 
