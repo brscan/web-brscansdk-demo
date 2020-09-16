@@ -131,3 +131,7 @@ try {
    console.error(erro);
 }
 ```
+
+## Versionamento
+
+Nós usamos [Github](https://github.com/) para versionar. Para as versões disponíveis, veja as [tags do repositório](https://github.com/brscan/web-brscansdk-demo). 
