@@ -10,15 +10,17 @@ Para o correto funcionamento do componente, o utilizador precisa estar conectado
 
 As soluções aqui apresentadas não se propõe à tratar tecnicamente documentos que originalmente não estejam em condições adequadas de captura (estado de conservação, envolvidos sob invólucros plásticos, etc.).
 
+Siga atentamente as instruções abaixo para a implementação bem-sucedida dos componentes.
+
 ### Pré requisitos
-	Os seguintes browsers são suportados pelos componentes:
+Os seguintes browsers são suportados pelos componentes:
 
 - Chrome >= 52
 - Safari >= 11
 - Firefox >= 36
 - Edge >= 12
 
-	Os seguintes sistemas operacionais são suportados pelos componentes:
+Os seguintes sistemas operacionais são suportados pelos componentes:
 
 - Windows >= 8
 - Mac OSX >= 10.0
