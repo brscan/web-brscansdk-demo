@@ -35,6 +35,8 @@ Os seguintes sistemas operacionais são suportados pelos componentes:
 
 ## Integração com o Componente de Captura de Selfie
 
+![](https://github.com/brscan/web-brscansdk-demo/blob/master/docs/diagrama_integracao_selfie.png)
+
 As dependências e artefatos do componente devem ser importados no Header da página em HTML:
 
 ```html
@@ -73,6 +75,9 @@ Para o funcionamento do script, é necessário existir um código pré-existente
 ```
 ## Integração com o Componente de Captura de Documento
 
+![](https://github.com/brscan/web-brscansdk-demo/blob/master/docs/diagrama_integracao_documento.png)
+
+
 As dependências e artefatos do componente devem ser importados no Header da página em HTML.
 
 ```html
@@ -107,6 +112,8 @@ Para o funcionamento do script, é necessário existir um código pré-existente
 </div>
 ```
 ## Integração com o Componente Face Match
+
+![](https://github.com/brscan/web-brscansdk-demo/blob/master/docs/diagrama_integracao_facematch.png)
 
 As dependências e artefatos do componente devem ser importados no Header da página em HTML:
 ```html
