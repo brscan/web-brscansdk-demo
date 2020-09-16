@@ -1,8 +1,8 @@
 # BrScanSDK WEB
 
-O objetivo deste DEMO é dar uma visão técnica do processo teste de prova de vida, captura de selfie e captura do documento de identificação do cliente, suas dependências e seus meios de implementação em sistemas terceiros.
+O objetivo é dar uma visão técnica do processo de prova de vida, captura de selfie e captura do documento de identificação do cliente, suas dependências e seus meios de implementação em sistemas de terceiros.
 
-No manual, serão apresentadas as dependências necessárias para o correto funcionamento do componente, exemplos e orientações de como instanciar o processo dentro de uma aplicação e munir o consumidor com um fluxo que detalha todas as integrações que são realizadas durante este processo.
+Serão apresentadas as dependências necessárias para o correto funcionamento dos componentes, exemplos e orientações de como instanciar o processo dentro de uma aplicação e munir o consumidor com um fluxo que detalha todas as integrações que são realizadas durante cada processo.
 
 Todo o processo de captura não registra imagens no componente do cliente e são descartadas logo que enviadas para o fluxo de análise ou entregues ao consumidor.
 
