@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>BrScan SDK FaceMatch Demo</title>
+
+	<script src="faceMatch/js/faceMatch.min.js"></script>
+</head>
+
+<body>
+	<div id="faceMatchContainer" class="faceMatchContainer">
+		<label for="docInput">Selecione um documento:</label>
+		<br/>
+		<input id="docInput" type="file"/>
+		<br/>
+		<br/>
+		<label for="selfieInput">Selecione uma selfie:</label>
+		<br/>
+		<input id="selfieInput" type="file"/>
+		<br/>
+		<br/>
+		<button id="enviar"> iniciar</button>
+	</div>
+</body>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+	try {
+
+			var documento = null;
+			var selfie = null;
+
+		  document.getElementById("docInput").onchange = (event) =>{
+		   documento = document.getElementById("docInput").files[0];
+			 console.log(documento)
+		  }
+
+			document.getElementById("selfieInput").onchange = (event) =>{
+		   selfie = document.getElementById("selfieInput").files[0];
+			 console.log(selfie)
+		  }
+
+			document.getElementById("enviar").addEventListener("click",() => {
+				try {
+
+					faceMatch = new FaceMatch(
+						// chave
+						" ",
+
+						// documento
+						documento,
+						// selfie
+			      		selfie,
+						// sucesso
+						(resultado) => {
+							alert("Sucesso")
+							alert("status: " + resultado.status);
+							alert("score: " + resultado.score);
+
+						},
+
+						// falha
+						(erroId, err) => {
+
+							alert("status: " + err.status);
+							alert("msg: " + err.msg);
+
+						}
+					);
+
+				faceMatch.iniciaFaceMatch();
+			}
+			catch(erro) {
+				console.error(erro);
+			}
+
+			});
+	}
+	catch(erro) {
+		console.error(erro);
+	}
+
+});
+
+</script>
+</html>
