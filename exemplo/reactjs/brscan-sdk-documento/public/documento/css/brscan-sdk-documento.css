@@ -1,0 +1,477 @@
+:root {
+    --cor-background: #fff;
+    --cor-primary: #c72725;
+    --cor-text: #000;
+}
+
+.documentoContainer {
+    position: absolute;
+
+    left: 0px;
+    top: 0px;
+
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+
+    background-color:#fff;
+
+    -webkit-text-size-adjust: none;
+    touch-action: manipulation;
+    font-family: 'IBM Plex Mono';
+    color: var(--cor-text);
+
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.corGray {
+    color: #333333;
+}
+
+.corBranco {
+    color: #fff;
+}
+
+.corPreto {
+    color: #000;
+}
+
+.escondido {
+    display: none;
+}
+
+.visivel {
+    display: block;
+}
+
+.paginaCompleta {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.centralizado {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+       -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+
+}
+
+.documentoTutorial {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.tutorialSlider {
+    display: none;
+}
+
+.documentoRotacioneAparelho {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: #fff;
+}
+
+.botaoAcao {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    height: 64px;
+    background-color: var(--cor-primary);
+    cursor: pointer;
+
+    
+}
+
+.botaoAcaoEnviar {
+    background-color: #fff;
+    display: none;
+}
+
+.textoBotaoAcao {
+    color: var(--cor-background);
+    width: 100%;
+    text-align: center;
+    
+    top: 25%;
+    font-size: 12px;
+}
+
+.textoBotaoAcaoEnviar {
+    color: var(--cor-text);
+    width: 100%;
+    text-align: center;
+    
+    top: 25%;
+    font-size: 12px;
+}
+
+
+.documentoContainer {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
+.botaoAcaoCancelar {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.ID_CAMERA_DIV {
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+   
+.loader {
+    border:8px solid #CF352E; 
+    border-top: 8px solid transparent; 
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+   
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loadingInit {
+    background-color: var(--cor-background);
+    
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    position: absolute;
+}
+
+
+.selecaoDocumento {
+    position: absolute;
+
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+}
+
+.selecaoDocumentoContainer {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    overflow: hidden;
+
+    background-color: var(--cor-primary);
+}
+
+.selecaoDocumentoTipo {
+    width: 100%;
+    height: 100%;
+}
+
+.selecaoDocumentoTipo h1 {    
+    color: #fff;
+    position: relative;
+    top: 60px;
+    left: 30px;
+}
+
+.selecaoDocumentoReview {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: var(--cor-primary);
+}
+
+.selecaoDocumentoTipoContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.selecaoDocumentoBotoes {
+    position: relative;
+
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+       -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.selecaoDocumentoTipoBotao {
+    text-align: center;
+    cursor: pointer;
+}
+
+.selecaoDocumentoTipoTexto {
+    color: #fff;
+}
+
+.selecaoDocumentoTipoLinha {
+    text-align: center;
+    height: 10px;
+    margin-bottom: 30px;
+
+}
+
+.selecaoDocumentoLinha {
+    height:2px; width: 100%
+}
+
+.selecaoDocumentoLado {
+    width: 100%;
+    height: 100%;
+}
+
+.selecaoDocumentoLado h1 {
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    font-weight: normal;
+    top: 60px;
+    text-align: center;
+}
+
+.botaoAcaoRetornarSelecaoDocumento {
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+.uploadContainer {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: var(--cor-primary);
+}
+
+.uploadManualContainer {
+    position: absolute;
+    left: 0px; top: 0px;
+    width: 100%; height: 100%;
+    background-color: var(--cor-primary);
+
+    display: none;
+}
+
+.uploadManualCancelar {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.documentoEmAnalise {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: var(--cor-background);
+}
+
+.docErro {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: var(--cor-background);
+}
+
+.iconeDoc {
+    object-fit: scale-down;
+}
+
+.uploadAutomatico {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: #000;
+}
+
+.docReview {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: var(--cor-primary);
+}
+
+.botaoAcaoReview {
+    cursor: pointer;
+    width: 50%;
+    height: 60px;
+    background-color: #000;
+
+    float: left
+}
+
+.botaoAcaoReviewRight {
+    float: right;
+    background-color: #fff;
+}
+
+.textoBotaoAcaoReview {
+    padding-top: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.textoBotaoAcaoReviewPreto {
+    padding-top: 5px;
+    text-align: center;
+    color: #000;
+
+}
+
+.documentoResultado {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: var(--cor-background);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.uploadManualButton {
+    cursor: pointer;
+    text-align: center;
+}
+
+.capturescreen {
+    min-height : 0px
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.docPadding {
+    margin: 40px
+}
+
+.reviewImagem {
+    height: 260px;
+    width: 300px;
+    object-fit: scale-down;
+}
+
+.reviewImagemText {
+    margin-left: 30px;
+    margin-top: 60px;
+}
+
+.reviewImagemBotoes {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%
+}
+
+.loading {
+    background-color: var(--cor-background);
+    
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    position: absolute;
+}
