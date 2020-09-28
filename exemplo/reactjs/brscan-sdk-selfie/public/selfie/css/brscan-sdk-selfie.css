@@ -1,0 +1,296 @@
+:root {
+    --cor-background: #fff;
+    --cor-primary: #c72725;
+    --cor-text: #000;
+}
+
+.loading {
+    background-color: var(--cor-background);
+    
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    position: absolute;
+}
+
+.selfieContainer {
+    position: absolute;
+
+    left: 0px;
+    top: 0px;
+
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+
+    background-color:#fff;
+
+    -webkit-text-size-adjust: none;
+    touch-action: manipulation;
+    font-family: 'IBM Plex Mono';
+    color: var(--cor-text);
+
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.escondido {
+    display: none;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.posicaoAbsolute {
+    position: absolute;
+}
+
+.visivel {
+    display: block;
+}
+
+.avisoLandscapeContainerClass {
+    background-color: var(--cor-branco);
+}
+
+.paginaCompleta {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.centralizado {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+       -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.avisoLandscapeImagem {
+    width: 40%;
+}
+
+.botaoAcao {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    height: 64px;
+    background-color: var(--cor-primary);
+    cursor: pointer;
+}
+
+.textoBotaoAcao {
+    color: var(--cor-background);
+    width: 100%;
+    text-align: center;
+    
+    top: 25%;
+    font-size: 12px;
+}
+
+.selfieContainer {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    display: none;
+}
+
+.selfieWebcamParent {
+    position: absolute;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+}
+
+.selfieAlertaErro {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: var(--cor-background);
+}
+
+.selfieWebcam {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+       -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.selfieCanvas {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+
+    
+}
+
+.selfieContainerParent {
+    width: 640px;
+    height: 480px;
+}
+
+.selfieMaskCanvas {
+    position: absolute;
+}
+
+.selfieMaskCanvasGreen {
+    -webkit-filter: contrast(100%) hue-rotate(120deg);
+    filter: contrast(100%) hue-rotate(120deg);
+}
+
+.selfieMaskGreenText {
+    color: green;
+}
+
+.webcamAviso {
+    width: 200px;
+    height: 55px;
+
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    text-align: center;
+    border-radius: 5px;
+}
+
+.frameIconBG {
+    width: 232px;
+    height: 232px;
+
+    padding-bottom: 90px;
+}
+
+.botaoAcaoCancelar {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.icone {
+    padding-bottom: 90px;
+}
+
+.botaoAcaoTextoContainer {
+    padding-top: 360px;
+    text-align: center;
+    color: var(--cor-branco);
+}
+
+.selfieRotacioneAparelho {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: var(--cor-background);
+}
+
+.selfieEmAnalise {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: var(--cor-background);
+}
+
+.selfieTutorial {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.tutorialIcone {
+    text-align: center;
+}
+
+.tutorialTexto {
+    color: var(--cor-branco);
+    text-align: center;
+}
+
+.tutorialItem {
+    width: 100%;
+    height: 100%;
+}
+
+.tutorialLeft {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    margin: 20px;
+}
+
+.tutorialRight {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 20px;
+}
+
+.selfieResultado {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: var(--cor-background);
+}
