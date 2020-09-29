@@ -53,7 +53,7 @@ function SelfieView(props) {
 		try {
             const selfie = new window.Selfie(
                 // chave
-                "",
+                "  ",
     
                 // div
                 document.getElementById('selfieContainer'),

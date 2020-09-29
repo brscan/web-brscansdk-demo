@@ -54,7 +54,7 @@ function DocumentoView(props) {
 		try {
             var documento = new window.Documento(
 				//chave
-				"",
+				"  ",
    
 			 document.getElementById("documentoContainer"),
    
