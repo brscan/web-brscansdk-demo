@@ -43,7 +43,7 @@ As dependências e artefatos do componente devem ser importados no Header da pá
 <link rel="stylesheet" href="css/brscan-sdk-fonts.css">
 <link rel="stylesheet" href="css/brscan-sdk-selfie.css">
 <script src="js/libs/selfie_libs.js"></script>
-<script src="js/Selfie.js"></script>
+<script src="js/selfie.min.js"></script>
 ```
 O componente deve ser inicializado com a seguinte chamada:
 
@@ -84,7 +84,7 @@ As dependências e artefatos do componente devem ser importados no Header da pá
 <link rel="stylesheet" href="css/brscan-sdk-fonts.css">
 <link rel="stylesheet" href="css/brscan-sdk-documento.css">
 <script src="js/libs/documento_libs.js"></script>
-<script src="js/Documento.js"></script>
+<script src="js/documento.min.js"></script>
 ```
 O componente deve ser inicializado com a seguinte chamada:
 ```javascript
