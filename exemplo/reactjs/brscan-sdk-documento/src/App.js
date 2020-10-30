@@ -5,21 +5,16 @@ import './App.css';
 import DocumentoView from './Documento';
 
 function App() {
-  const [documentos, setDocumentos] = useState(null);
 
   return (
     <div className="App">
-      { documentos ? 
-        documentos
-      :
       <DocumentoView
         documentoSucesso={(documentos) => {
-          setDocumentos(JSON.stringify(documentos));
+          alert('Documentos recebidos com sucesso');
         }}
         documentoErro={(id, mensagem) => {
           alert("Atenção: " + mensagem);
         }} />
-      }
     </div>
   );
 }

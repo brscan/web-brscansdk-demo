@@ -3,7 +3,6 @@
     --cor-primary: #c72725;
     --cor-text: #000;
 }
-
 .documentoContainer {
     position: absolute;
 
@@ -12,13 +11,13 @@
 
     width: 100%;
     height: 100%;
-    padding: 0px;
-    margin: 0px;
 
-    background-color:#fff;
+    padding: 0px;
+    margin: 0px;    
 
     -webkit-text-size-adjust: none;
     touch-action: manipulation;
+
     font-family: 'IBM Plex Mono';
     color: var(--cor-text);
 
@@ -27,6 +26,10 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+
+    background-color:var(--cor-background);
+
+    display: none;
 }
 
 h1 {
@@ -80,10 +83,12 @@ p {
 .documentoTutorial {
     margin-top: 60px;
     text-align: center;
+    
 }
 
-.tutorialSlider {
+.documentoTutorialSlider {
     display: none;
+
 }
 
 .documentoRotacioneAparelho {
@@ -135,14 +140,6 @@ p {
     font-size: 12px;
 }
 
-
-.documentoContainer {
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-}
-
 .botaoAcaoCancelar {
     position: absolute;
     right: 20px;
@@ -171,7 +168,7 @@ p {
     transform: translate(-50%, -50%);
 }
 
-.loadingInit {
+.documentoLoading {
     background-color: var(--cor-background);
     
     width: 100%;
@@ -183,10 +180,19 @@ p {
     position: absolute;
 }
 
+.documentoFechar {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    cursor: pointer;
+}
 
 .selecaoDocumento {
     position: absolute;
 
+    width: 100%;
     height: 100%;
 
     top: 0px;
@@ -200,26 +206,23 @@ p {
     width: 100%;
     height: 100%;
 
-    top: 0px;
-    left: 0px;
+    background-color: var(--cor-primary);
 
     display: none;
-
-    overflow: hidden;
-
-    background-color: var(--cor-primary);
 }
 
 .selecaoDocumentoTipo {
-    width: 100%;
-    height: 100%;
+    
 }
 
 .selecaoDocumentoTipo h1 {    
     color: #fff;
     position: relative;
-    top: 60px;
-    left: 30px;
+    top: 30px;
+
+    margin: 0px;
+
+    padding-left: 30px;
 }
 
 .selecaoDocumentoReview {
@@ -242,15 +245,7 @@ p {
 }
 
 .selecaoDocumentoBotoes {
-    position: relative;
-
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-     -moz-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-       -o-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+    margin-top: 90px;
 }
 
 .selecaoDocumentoTipoBotao {
@@ -264,13 +259,15 @@ p {
 
 .selecaoDocumentoTipoLinha {
     text-align: center;
-    height: 10px;
-    margin-bottom: 30px;
-
+    height: 1px;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: #c2c2c2;
+    opacity: 0.5;
 }
 
 .selecaoDocumentoLinha {
-    height:2px; width: 100%
+    height:2px;
 }
 
 .selecaoDocumentoLado {
@@ -278,20 +275,32 @@ p {
     height: 100%;
 }
 
-.selecaoDocumentoLado h1 {
+.textoDocumentoLado {
     font-size: 16px;
     color: #fff;
-    position: relative;
+    position: absolute;
     font-weight: normal;
-    top: 60px;
+
+    margin: 0px;
+
+    top: 35px;
+    left: 90px;
+
+    padding-right: 20px;
+
     text-align: center;
 }
 
 .botaoAcaoRetornarSelecaoDocumento {
     cursor: pointer;
     position: relative;
+
     top: 30px;
-    left: 30px;
+
+    width: 32px;
+    height: 32px;
+
+    margin-left: 30px;
 }
 
 .uploadContainer {
@@ -411,6 +420,29 @@ p {
 
 }
 
+.documentoQuestaoCPF {
+    color: #fff;
+    display: none;
+
+    position: absolute;
+
+    left: 0px;
+    right: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--cor-primary);
+}
+
+.documentoQuestaoCPF p {
+    cursor: pointer;
+}
+
+.ladoCPF {
+    display: none;
+}
+
 .documentoResultado {
     position: absolute;
 
@@ -449,6 +481,7 @@ p {
 .reviewImagem {
     height: 260px;
     width: 300px;
+    
     object-fit: scale-down;
 }
 
@@ -474,4 +507,8 @@ p {
     left: 0px;
 
     position: absolute;
+}
+
+.scroll-content {
+    height: 100%;
 }

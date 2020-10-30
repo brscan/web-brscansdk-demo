@@ -8,152 +8,89 @@
     <link rel="stylesheet" href="documento/css/tiny-slider.css">
 	  <link rel="stylesheet" href="documento/css/tiny-slider-styles.css">
 	  <link rel="stylesheet" href="documento/css/brscan-sdk-documento-fonts.css">
-	  <link rel="stylesheet" href="documento/css/brscan-sdk-documento.css">
+    <link rel="stylesheet" href="documento/css/brscan-sdk-documento.css">
+    
 
     <link rel="stylesheet" href="documento/js/KfxWebSDK/CSS/KfxWebSDK.css">
+    
+    <script type="text/javascript" src="documento/js/common/getusermedia.js"></script>
+    <script type="text/javascript" src="documento/js/common/polyfil.js"></script>
+    <script type="text/javascript" src="documento/js/common/tinyslider.js"></script>
 
-    <script type="text/javascript" src="documento/js/documento_libs.js"></script>
-    <script type="text/javascript" src="documento/js/documento.min.js"></script>
     <script type="text/javascript" src="documento/js/KfxWebSDK/KfxWebSDK.js"></script>
+
+    <script type="text/javascript" src="documento/js/documento_data.js"></script>
+    <script type="text/javascript" src="documento/js/documento.min.js"></script>
+    
   </head>
 
   <body>
 
+
     <div id="documentoContainer" class="documentoContainer">
-
-      <div id="tutorialSlider" class="tutorialSlider">
-        <div class="documentoTutorial">
-          <div class="item">
-            <div class="tutorialIcone">
-              <div><img src="documento/img/DocInicioIcon.png"/></div>
-            </div>
-            <div class="tutorialTexto">
-              <h1>Vamos lá!</h1>
-              <p>Tenha seus documentos em mãos,<br/>RG ou CNH.</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="tutorialIcone">
-              <div><img src="documento/img/DocIconLuz.png"/></div>
-            </div>
-            <div class="tutorialTexto">
-              <h1>Escolha um local<br/>iluminado</h1>
-              <p>Posicione seu documento em uma<br/>superfície lisa e, de preferência, escura.</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="tutorialIcone">
-              <div><img src="documento/img/DocIconPlastico.png"/></div>
-            </div>
-            <div class="tutorialTexto">
-              <h1>Retire o documento<br/>do plástico</h1>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="tutorialIcone">
-              <div><img src="documento/img/DocIconFundoEstampado.png"/></div>
-            </div>
-            <div class="tutorialTexto">
-              <h1>Evite fundos<br/>estampados</h1>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="tutorialIcone">
-              <div><img src="documento/img/DocIconReflexo.png"/></div>
-            </div>
-            <div class="tutorialTexto">
-              <h1>Evite reflexos no documento</h1>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="tutorialIcone">
-              <div><img src="documento/img/DocIconFrenteDocumento.png"/></div>
-            </div>
-            <div class="tutorialTexto">
-              <h1>Fotografe a frente do documento</h1>
-              <p>Use o lado que possui sua foto.</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="tutorialIcone">
-              <div><img src="documento/img/DocIconTrasDocumento.png"/></div>
-            </div>
-            <div class="tutorialTexto">
-              <h1>Fotografe o verso do documento</h1>
-              <p>Use o lado que não possui foto.</p>
-            </div>
-          </div>
-        </div>
-
-        <div id="botaoAcaoTutorial" class="botaoAcao"><p id="textoBotaoAcaoTutorial" class="textoBotaoAcao centralizado">AVANÇAR</p></div>
-      </div>
 
       <div id="selecaoDocumentoContainer" class="selecaoDocumentoContainer">
 
-          <div class="selecaoDocumento">
-            <div class="selecaoDocumentoTipo">
+          <div id="selecaoDocumento" class="selecaoDocumento">
+            <div id="selecaoDocumentoTipo" class="selecaoDocumentoTipo">
               <h1>
                   Selecione o tipo de<br/>documento.
               </h1>
 
               <div class="selecaoDocumentoTipoContainer">
 
-                <div class="selecaoDocumentoBotoes">
-                  <div id="selecaoDocumentoTipoRG" class="selecaoDocumentoTipoBotao">
-                    <img src="documento/img/IconRG.png"/>
-                    <p class="selecaoDocumentoTipoTexto">USAR MEU RG</p>
-                  </div>
+                <div id="selecaoDocumentoBotoes" class="selecaoDocumentoBotoes">
 
-                  <div class="selecaoDocumentoTipoLinha">
-                    <img src="documento/img/Line.png"/>
-                  </div>
-
-                  <div id="selecaoDocumentoTipoCNH" class="selecaoDocumentoTipoBotao">
-                    <img src="documento/img/IconCNH.png"/>
-                    <p class="selecaoDocumentoTipoTexto">USAR MINHA CNH</p>
-                  </div>
                 </div>
 
               </div>
             </div>
 
-            <div class="selecaoDocumentoLado">
+            <div id="selecaoDocumentoLado" class="selecaoDocumentoLado">
+
+              <h1 class="textoDocumentoLado" id="textoDocumentoLado">
+
+              </h1>
+
               <div class="botaoAcaoRetornarSelecaoDocumento" id="botaoAcaoRetornarSelecaoDocumento">
                 <img src="documento/img/IconLeft.png"/>
               </div>
 
-              <h1 id="textoDocumentoLado">
-
-              </h1>
-
               <div class="selecaoDocumentoBotoes">
 
                 <div id="selecaoDocumentoFrente" class="selecaoDocumentoTipoBotao">
-                  <img class="iconeDoc" id="iconeFrente" src="" style="object-fit: scale-down;"/>
+                  <img class="iconeDoc" id="iconeFrente" src=""/>
                   <p class="selecaoDocumentoTipoTexto">FOTO DA FRENTE</p>
                 </div>
 
-                <div class="selecaoDocumentoTipoLinha">
-                  <img src="documento/img/Line.png"/>
-                </div>
 
                 <div id="selecaoDocumentoVerso" class="selecaoDocumentoTipoBotao">
-                  <img class="iconeDoc" id="iconeVerso" src="" style="object-fit: scale-down;"/>
+                  <div class="selecaoDocumentoTipoLinha">
+                  </div>
+
+                  <img class="iconeDoc" id="iconeVerso" src=""/>
                   <p class="selecaoDocumentoTipoTexto">FOTO DO VERSO</p>
                 </div>
 
-                <div class="selecaoDocumentoTipoLinha">
-                  <img style="height:2px; width: 100%" src="documento/img/Line.png"/>
-                </div>
 
                 <div id="selecaoDocumentoFrenteVerso" class="selecaoDocumentoTipoBotao">
-                  <img class="iconeDoc" id="iconeFrenteVerso" src="" style="object-fit: scale-down;"/>
+                  <div class="selecaoDocumentoTipoLinha">
+                  </div>
+                  
+                  <img class="iconeDoc" id="iconeFrenteVerso" src=""/>
                   <p class="selecaoDocumentoTipoTexto">FRENTE E VERSO</p>
+                </div>
+
+                <div id="ladoCPF" class="ladoCPF">
+
+                  <div class="selecaoDocumentoTipoLinha">
+                  </div>
+  
+                  <div id="selecaoDocumentoCPF" class="selecaoDocumentoTipoBotao">
+                    <img class="iconeDoc" id="iconeCPF" src="documento/img/IconCPF.png"/>
+                    <p class="selecaoDocumentoTipoTexto">CPF</p>
+                  </div>
+
                 </div>
 
               </div>
@@ -162,7 +99,7 @@
 
           </div>
 
-          <div id="botaoAcaoEnviar" style="background-color: #fff; display: none;" class="botaoAcao"><p id="textoBotaoAcaoTutorial" style="color: #000;" class="textoBotaoAcao centralizado">ENVIAR</p></div>
+          <div id="botaoAcaoEnviar" class="botaoAcao botaoAcaoEnviar"><p id="textoBotaoAcaoTutorial" class="textoBotaoAcaoEnviar centralizado">ENVIAR</p></div>
       </div>
 
       <div id="selecaoDocumentoReview" class="selecaoDocumentoReview">
@@ -172,11 +109,11 @@
       <div id="upload" class="uploadContainer">
 
         <div id="uploadManual" class="uploadManualContainer">
-          <input style="visibility: hidden;" id="docFileInput" type="file" accept=".jpg,.jpeg,.png" />
+          <input class="hidden" id="docFileInput" type="file" accept=".jpg,.jpeg,.png" />
 
-          <div id="uploadManualButton" style="cursor: pointer; text-align: center;" class="centralizado">
+          <div id="uploadManualButton" class="uploadManualButton centralizado">
             <img src="documento/img/IconGallery.png"/>
-            <p style="color: #fff">Escolher arquivo</p>
+            <p class="corBranco">Escolher arquivo</p>
           </div>
 
           <div id="uploadManualCancelar" class="uploadManualCancelar">
@@ -185,77 +122,73 @@
 
         </div>
 
-        <div id="upload-semi-automatico" style= "display : none">
-          <div class="camera">
-            <video id="video">NO VIDEO STREAM.</video>
-            <button id="capturarButton">CAPTURAR FOTO</button>
-          </div>
-          <canvas id="canvas">
-          </canvas>
-          <div class="output">
-            <img id="photo" alt="">
-          </div>
-
-        </div>
-
         <div id="uploadAutomatico" class="uploadAutomatico">
-          <div data-role="page" id = "capturescreen" style= "min-height : 0px">
-            <div id="ID_CAMERA_DIV" class="ID_CAMERA_DIV">
-
-            </div>
+          <div data-role="page" id="capturescreen" class="capturescreen">
+            
           </div>
+    
+          <div id="uploadAutomaticoCancelar" class="uploadManualCancelar">
+            <img src="documento/img/IconFechar.png" />
+          </div>
+    
         </div>
+    
 
-        <div id="uploadAutomaticoCancelar" class="uploadManualCancelar">
-          <img src="documento/img/IconFechar.png" />
-        </div>
       </div>
 
       <div id="documentoEmAnalise" class="documentoEmAnalise">
-        <div style="text-align: center;" class="centralizado">
+        <div class="centralizado textCenter">
           <img src="documento/img/IconEmAnalise.png"/>
           <p><b>Em análise</b></p>
           <p>Aguarde um instante</p>
         </div>
       </div>
 
-
       <div id="docReview" class="docReview">
-        <div style="text-align: center; margin: 40px">
-          <img id="reviewImagem" src="" style="height: 260px; width: 300px; object-fit: scale-down;"/>
+        <div class="textCenter docPadding">
+          <img id="reviewImagem" src="" class="reviewImagem"/>
         </div>
 
-        <div style="margin-left: 30px; margin-top: 60px;">
-          <p><b style="color: #fff">Revisar foto.</b></p>
-          <p style="color: #fff">A foto está nítida e bem iluminada?<br/>Lembre-se que não pode ter reflexo.</p>
+        <div class="reviewImagemText">
+          <p><b class="corBranco">Revisar foto.</b></p>
+          <p class="corBranco">A foto está nítida e bem iluminada?<br/>Lembre-se que não pode ter reflexo.</p>
         </div>
 
-        <div style="position: absolute; bottom: 0px; left: 0px; width: 100%">
-          <div id="botaoAcaoTirarOutra" style="float: left" class="botaoAcaoReview"><p class="textoBotaoAcaoReview">TIRAR OUTRA</p></div>
-          <div id="botaoAcaoFicouBoa" style="float: right; background-color: #fff;" class="botaoAcaoReview"><p style="color: var(--cor-primary)" class="textoBotaoAcaoReview">FICOU BOA</p></div>
+        <div class="reviewImagemBotoes">
+          <div id="botaoAcaoTirarOutra" class="botaoAcaoReview"><p class="textoBotaoAcaoReview">TIRAR OUTRA</p></div>
+          <div id="botaoAcaoFicouBoa" class="botaoAcaoReview botaoAcaoReviewRight"><p class="textoBotaoAcaoReviewPreto">FICOU BOA</p></div>
         </div>
 
       </div>
 
+      <div id="documentoQuestaoCPF" class="documentoQuestaoCPF">
+        <div class="centralizado textCenter">
+          <h1>Este documento possui CPF?</h1>
+          <div>
+            <b></b><p id="documentoComCPF">Sim</p></b> <p id="documentoSemCPF">Não</p>
+          </div>
+        </div>
+      </div>
+
       <div id="docErro" class="docErro">
-        <div style="text-align: center;" class="centralizado">
+        <div class="centralizado textCenter">
           <img src="documento/img/DocError.png"/>
-          <p><b style="color: #000">Atenção</b></p>
-          <p style="color: #000" id="docErroText"></p>
+          <p><b class="corPreto">Atenção</b></p>
+          <p class="corPreto" id="docErroText"></p>
         </div>
 
         <div id="botaoAcaoTentarCapturarNovamente" class="botaoAcao"><p class="textoBotaoAcao centralizado">TENTAR NOVAMENTE</p></div>
       </div>
 
       <div id="documentoRotacioneAparelho" class="documentoRotacioneAparelho">
-        <div style="text-align: center;" class="centralizado">
-          <img style="width: 50%; height: 50%" src="documento/img/DocumentoErroRotacione.png"/>
+        <div class="centralizado textCenter">
+          <img src="documento/img/DocumentoErroRotacione.png"/>
           <p>Rotacione seu aparelho para a vertical</p>
         </div>
       </div>
 
       <div id="documentoResultado" class="documentoResultado">
-        <div style="text-align: center;" class="centralizado">
+        <div class="centralizado textCenter">
           <img id="selfieImagemResultado" src="documento/img/DocIconSucesso.png"/>
 
           <p><b>Pronto!</b></p>
@@ -265,30 +198,35 @@
         <div id="botaoAcarFinalizarDocumento" class="botaoAcao"><p class="textoBotaoAcao centralizado">FINALIZAR</p></div>
       </div>
 
+      <div id="documentoLoading" class="documentoLoading">
+        <div class="centralizado">
+          <img src="documento/img/Loading.gif" />
+        </div>
+      </div>
+
     </div>
 
 		<script>
       document.addEventListener('DOMContentLoaded', function() {
         var documento = new Documento(
       	   " ",
+          document.getElementById("documentoContainer")
+        );
 
-          document.getElementById("capturaContainer"),
-
+        documento.iniciaDocumento(
+          // sucesso
           (documentos) => {
-            alert('Componente executado com sucesso');
             console.log(documentos);
-
-            documento.iniciaDocumento();
+            alert('Documentos recebidos com sucesso');
 
           },
-
+          // falha
           (erroId, mensagem) => {
             console.error(erroId, mensagem);
 
-          }
+          },
+          true
         );
-
-        documento.iniciaDocumento();
       })
 		</script>
   </body>

@@ -11,108 +11,39 @@
 	<link rel="stylesheet" href="selfie/css/brscan-sdk-selfie-fonts.css">
 	<link rel="stylesheet" href="selfie/css/brscan-sdk-selfie.css">
 
-	<script src="selfie/js/selfie_libs.js"></script>
+	<script type="text/javascript" src="selfie/js/common/getusermedia.js"></script>
+	<script type="text/javascript" src="selfie/js/common/polyfil.js"></script>
+	<script type="text/javascript" src="selfie/js/common/pico.js"></script>
+	<script type="text/javascript" src="selfie/js/common/tinyslider.js"></script>
+
 	<script src="selfie/js/selfie_data.js"></script>
 	<script src="selfie/js/selfie.min.js"></script>
 </head>
 
 <body>
-
 	<div id="selfieContainer" class="selfieContainer">
-		<div id="tutorialSlider" style="display: none;">
-			<div class="selfieTutorial">
-				<div class="item">
-					<div class="tutorialIcone">
-						<div><img src="selfie/img/SelfieIconIntro.png"/></div>
-					</div>
-					<div class="tutorialTexto">
-						<h1>Olá,</h1>
-						<p>Hora de tirar sua foto de identificação.<br/>Antes de começar, algumas dicas.</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="tutorialIcone">
-						<div><img src="selfie/img/SelfieIconLuz.png"/></div>
-					</div>
-					<div class="tutorialTexto">
-						<h1>Iluminação</h1>
-						<p>Escolha um lugar com uma Iluminação adequada</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="tutorialIcone">
-						<div><img src="selfie/img/SelfieIconAcessorios.png"/></div>
-					</div>
-					<div class="tutorialTexto">
-						<h1>Evite utilizar acessórios</h1>
-						<p>Óculos escuros, boné, chapéu ou máscara<br/>atrapalham o processo da captura.</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="tutorialIcone">
-						<div><img src="selfie/img/SelfieIconEnquadramento.png"/></div>
-					</div>
-					<div class="tutorialTexto">
-						<h1>Enquadre bem</h1>
-						<p>Seu rosto deve estar bem<br/>no centro da tela</p>
-					</div>
-				</div>
-			</div>
-			<div id="botaoAcaoTutorial" class="botaoAcao"><p id="textoBotaoAcaoTutorial" class="textoBotaoAcao centralizado">AVANÇAR</p></div>
-		</div>
-
 		<div id="selfieWebcamParent" class="selfieWebcamParent">
 			<div class="selfieWebcam">
 				<div id="selfieContainerParent" class="selfieContainerParent">
-					<video style="position:absolute;" playsinline autoplay muted></video>
-					<canvas class="selfieCanvas"></canvas>
+					<video class="posicaoAbsolute" playsinline autoplay muted></video>
+					<canvas id="selfieCanvas" class="selfieCanvas"></canvas>
 				</div>
-
 				<div class="selfieMaskCanvas centralizado">
 					<img class="selfieMaskCanvas centralizado" id="selfieMaskId" src="selfie/img/SelfieFrameMask.png"/>
 					<img class="selfieMaskCanvas centralizado" id="selfieMaskIdDetails" src="selfie/img/SelfieFrameMaskDetails.png"/>
 					<img class="selfieMaskCanvas centralizado" id="selfieMaskIdOval" src="selfie/img/SelfieFrameMaskOval.png"/>
 				</div>
 			</div>
-
 			<div id="selfieAvisoContainer" class="webcamAviso"><p id="selfieTextoAviso">Aguarde ...</p></div>
-			<div id="botaoAcaoCancelar" class="botaoAcaoCancelar"><img id="botaoAcaoCancelarImagem" src="selfie/img/IconFechar.png"/></div>
+			<div id="selfieBotaoAcaoCancelar" class="selfieBotaoAcaoCancelar"><img id="botaoAcaoCancelarImagem" src="selfie/img/IconFechar.png"/></div>
 		</div>
 
-		<div id="selfieRotacioneAparelho" class="selfieRotacioneAparelho">
-			<div style="text-align: center;" class="centralizado">
-				<img style="width: 50%; height: 50%" src="selfie/img/SelfieErroRotacione.png"/>
-				<p>Rotacione seu aparelho para a vertical</p>
+		<div id="selfieLoading" class="selfieLoading">
+			<div class="centralizado">
+				<img src="selfie/img/Loading.gif" />
 			</div>
 		</div>
-
-		<div id="selfieEmAnalise" class="selfieEmAnalise">
-			<div style="text-align: center;" class="centralizado">
-				<img src="selfie/img/IconEmAnalise.png"/>
-				<p><b>Em análise</b></p>
-				<p>Aguarde um instante</p>
-			</div>
-		</div>
-
-		<div id="selfieAlertaErro" class="selfieAlertaErro">
-			<div style="text-align: center;" class="centralizado">
-				<img id="selfieAlertaErroImagem" src="selfie/img/IconFalha.png"/>
-				<p><b id="selfieAlertaErroHeader">Atenção</b></p>
-				<p id="selfieAlertaErroMensagem">...</p>
-			</div>
-			<div id="botaoAcaoTentarNovamente" class="botaoAcao"><p class="textoBotaoAcao centralizado">TENTAR NOVAMENTE</p></div>
-		</div>
-	</div>
-
-	<div id="selfieResultado" class="selfieResultado">
-		<div style="text-align: center;" class="centralizado">
-			<img id="selfieImagemResultado" style="width: 50%; height: 50%" src=""/>
-
-			<p><b>Pronto!</b></p>
-			<p>Sua foto foi registrada com sucesso.</p>
-		</div>
-
-		<div id="botaoAcarFinalizarSelfie" class="botaoAcao"><p class="textoBotaoAcao centralizado">FINALIZAR</p></div>
+	
 	</div>
 </body>
 
@@ -125,15 +56,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		selfie = new Selfie(
 			// chave
 			" ",
-
 			// elemento div
-			document.getElementById('selfieContainer'),
+			document.getElementById('selfieContainer')
 
+
+		);
+
+		selfie.iniciaSelfie(
 			// sucesso
 			(selfie) => {
-				let selfieImagemResultado = document.getElementById("selfieImagemResultado");
-				selfieImagemResultado.src = selfie;
-				mostraObj("selfieResultado")
+				alert('Selfie recebida com sucesso');
+
 			},
 
 			// falha
@@ -141,31 +74,14 @@ document.addEventListener('DOMContentLoaded', function() {
 				console.log(erroId, mensagem);
 				alert("Atenção: " + mensagem);
 
-				// tentar novamente
-				escondeObj("selfieResultado");
-				selfie.iniciaSelfie();
 			}
 		);
-
-		selfie.iniciaSelfie();
 	}
 	catch(erro) {
 		console.error(erro);
 	}
 
-	var botaoAcarFinalizarSelfie = document.getElementById("botaoAcarFinalizarSelfie");
-	if(botaoAcarFinalizarSelfie) {
-		botaoAcarFinalizarSelfie.addEventListener("click", function(ev) {
-			demoFinalizarSelfie();
-		}, false)
-	}
-
 });
-
-function demoFinalizarSelfie() {
-    escondeObj("selfieResultado");
-    selfie.iniciaSelfie();
-}
 
 </script>
 </html>

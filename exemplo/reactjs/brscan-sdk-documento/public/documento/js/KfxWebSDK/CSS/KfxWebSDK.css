@@ -16,10 +16,6 @@
     position: relative;
 }
 
-.kfx-capture {
-
-}
-
 .kfx-content {
     position: absolute;
     left: 0;
@@ -29,7 +25,10 @@
 
     text-align: center;
     white-space: nowrap;
+}
 
+.kfx-disableac .kfx-content{
+    bottom: 0;
 }
 
 .kfx-content::before {
@@ -152,6 +151,10 @@
 
 .kfx-review .kfx-button.kfx-accept .kfx-text::before {
     content: 'Accept';
+}
+
+.kfx-review .kfx-button.kfx-accept.kfx-next .kfx-text::before {
+    content: 'Next Image';
 }
 
 .kfx-review .kfx-button.kfx-retake {

@@ -3,17 +3,21 @@
     --cor-primary: #c72725;
     --cor-text: #000;
 }
+.documentoContainer {
+    position: absolute;
 
-html, body {
+    left: 0px;
+    top: 0px;
+
     width: 100%;
     height: 100%;
-    padding: 0px;
-    margin: 0px;
 
-    background-color:#fff;
+    padding: 0px;
+    margin: 0px;    
 
     -webkit-text-size-adjust: none;
     touch-action: manipulation;
+
     font-family: 'IBM Plex Mono';
     color: var(--cor-text);
 
@@ -22,6 +26,8 @@ html, body {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+
+    background-color:var(--cor-background);
 }
 
 h1 {
@@ -75,10 +81,12 @@ p {
 .documentoTutorial {
     margin-top: 60px;
     text-align: center;
+    
 }
 
-.tutorialSlider {
+.documentoTutorialSlider {
     display: none;
+
 }
 
 .documentoRotacioneAparelho {
@@ -103,6 +111,13 @@ p {
     height: 64px;
     background-color: var(--cor-primary);
     cursor: pointer;
+
+    
+}
+
+.botaoAcaoEnviar {
+    background-color: #fff;
+    display: none;
 }
 
 .textoBotaoAcao {
@@ -114,11 +129,13 @@ p {
     font-size: 12px;
 }
 
-.documentoContainer {
-    position: absolute;
-
+.textoBotaoAcaoEnviar {
+    color: var(--cor-text);
     width: 100%;
-    height: 100%;
+    text-align: center;
+    
+    top: 25%;
+    font-size: 12px;
 }
 
 .botaoAcaoCancelar {
@@ -149,9 +166,31 @@ p {
     transform: translate(-50%, -50%);
 }
 
+.documentoLoading {
+    background-color: var(--cor-background);
+    
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    position: absolute;
+}
+
+.documentoFechar {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    cursor: pointer;
+}
+
 .selecaoDocumento {
     position: absolute;
 
+    width: 100%;
     height: 100%;
 
     top: 0px;
@@ -165,26 +204,23 @@ p {
     width: 100%;
     height: 100%;
 
-    top: 0px;
-    left: 0px;
+    background-color: var(--cor-primary);
 
     display: none;
-
-    overflow: hidden;
-
-    background-color: var(--cor-primary);
 }
 
 .selecaoDocumentoTipo {
-    width: 100%;
-    height: 100%;
+    
 }
 
 .selecaoDocumentoTipo h1 {    
     color: #fff;
     position: relative;
-    top: 60px;
-    left: 30px;
+    top: 30px;
+
+    margin: 0px;
+
+    padding-left: 30px;
 }
 
 .selecaoDocumentoReview {
@@ -207,15 +243,7 @@ p {
 }
 
 .selecaoDocumentoBotoes {
-    position: relative;
-
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-     -moz-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-       -o-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+    margin-top: 90px;
 }
 
 .selecaoDocumentoTipoBotao {
@@ -229,9 +257,15 @@ p {
 
 .selecaoDocumentoTipoLinha {
     text-align: center;
-    height: 10px;
-    margin-bottom: 30px;
+    height: 1px;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: #c2c2c2;
+    opacity: 0.5;
+}
 
+.selecaoDocumentoLinha {
+    height:2px;
 }
 
 .selecaoDocumentoLado {
@@ -239,20 +273,32 @@ p {
     height: 100%;
 }
 
-.selecaoDocumentoLado h1 {
+.textoDocumentoLado {
     font-size: 16px;
     color: #fff;
-    position: relative;
+    position: absolute;
     font-weight: normal;
-    top: 60px;
+
+    margin: 0px;
+
+    top: 35px;
+    left: 90px;
+
+    padding-right: 20px;
+
     text-align: center;
 }
 
 .botaoAcaoRetornarSelecaoDocumento {
     cursor: pointer;
     position: relative;
+
     top: 30px;
-    left: 30px;
+
+    width: 32px;
+    height: 32px;
+
+    margin-left: 30px;
 }
 
 .uploadContainer {
@@ -314,7 +360,7 @@ p {
 }
 
 .iconeDoc {
-    object-fit: cover;
+    object-fit: scale-down;
 }
 
 .uploadAutomatico {
@@ -350,12 +396,49 @@ p {
     width: 50%;
     height: 60px;
     background-color: #000;
+
+    float: left
+}
+
+.botaoAcaoReviewRight {
+    float: right;
+    background-color: #fff;
 }
 
 .textoBotaoAcaoReview {
     padding-top: 5px;
     text-align: center;
     color: #fff;
+}
+
+.textoBotaoAcaoReviewPreto {
+    padding-top: 5px;
+    text-align: center;
+    color: #000;
+
+}
+
+.documentoQuestaoCPF {
+    color: #fff;
+    display: none;
+
+    position: absolute;
+
+    left: 0px;
+    right: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--cor-primary);
+}
+
+.documentoQuestaoCPF p {
+    cursor: pointer;
+}
+
+.ladoCPF {
+    display: none;
 }
 
 .documentoResultado {
@@ -370,4 +453,60 @@ p {
     display: none;
 
     background-color: var(--cor-background);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.uploadManualButton {
+    cursor: pointer;
+    text-align: center;
+}
+
+.capturescreen {
+    min-height : 0px
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.docPadding {
+    margin: 40px
+}
+
+.reviewImagem {
+    height: 260px;
+    width: 300px;
+    
+    object-fit: scale-down;
+}
+
+.reviewImagemText {
+    margin-left: 30px;
+    margin-top: 60px;
+}
+
+.reviewImagemBotoes {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%
+}
+
+.loading {
+    background-color: var(--cor-background);
+    
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    position: absolute;
+}
+
+.scroll-content {
+    height: 100%;
 }

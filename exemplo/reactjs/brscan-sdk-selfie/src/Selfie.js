@@ -27,7 +27,11 @@ const removeElement = (arquivo, element) => {
     }
 }
 
-appendElement("selfie/js/selfie_libs.js", "script");
+appendElement("selfie/js/common/getusermedia.js", "script");
+appendElement("selfie/js/common/polyfil.js", "script");
+appendElement("selfie/js/common/pico.js", "script");
+appendElement("selfie/js/common/tinyslider.js", "script");
+
 appendElement("selfie/js/selfie_data.js", "script");
 appendElement("selfie/js/selfie.min.js", "script");
 
@@ -51,28 +55,27 @@ function SelfieView(props) {
 	
 	const carregaSelfie = () => {
 		try {
-            const selfie = new window.Selfie(
-                // chave
-                "  ",
-    
-                // div
-                document.getElementById('selfieContainer'),
-    
-                // sucesso
-                (selfie) => {
-					window.escondeObj("selfieContainer")
-					selfieSucesso(selfie);
-					
-                },
-    
-                // falha
-                (erroId, mensagem) => {
-                    window.escondeObj("selfieResultado");
-                    selfieErro(erroId, mensagem);
-                }
-            );
-    
-            selfie.iniciaSelfie();
+            
+			let selfie = new window.Selfie(
+				// chave
+				" ",
+				
+				// elemento div
+				document.getElementById('selfieContainer')
+
+			);
+	
+			selfie.iniciaSelfie(
+				// sucesso
+				(selfie) => {
+					selfieSucesso(selfie);				
+				},
+	
+				// falha
+				(erroId, mensagem) => {
+					selfieErro(erroId, mensagem);
+				}
+			);
         }
         catch(erro) {
             console.error(erro);
@@ -93,108 +96,32 @@ function SelfieView(props) {
 
 	return (
         <div className="App">
-            <div id="selfieContainer" className="selfieContainer">
-				<div id="tutorialSlider" style={{display: 'none'}}>
-					<div className="selfieTutorial">
-						<div className="item">
-							<div className="tutorialIcone">
-								<div><img src="selfie/img/SelfieIconIntro.png"/></div>
-							</div>
-							<div className="tutorialTexto">
-								<h1>Olá,</h1>
-								<p>Hora de tirar sua foto de identificação.<br/>Antes de começar, algumas dicas.</p>
-							</div>
-						</div>
-						<div className="item">
-							<div className="tutorialIcone">
-								<div><img src="selfie/img/SelfieIconLuz.png"/></div>
-							</div>
-							<div className="tutorialTexto">
-								<h1>Iluminação</h1>
-								<p>Escolha um lugar com uma Iluminação adequada</p>
-							</div>
-						</div>
-						<div className="item">
-							<div className="tutorialIcone">
-								<div><img src="selfie/img/SelfieIconAcessorios.png"/></div>
-							</div>
-							<div className="tutorialTexto">
-								<h1>Evite utilizar acessórios</h1>
-								<p>Óculos escuros, boné, chapéu ou máscara<br/>atrapalham o processo da captura.</p>
-							</div>
-						</div>
-						<div className="item">
-							<div className="tutorialIcone">
-								<div><img src="selfie/img/SelfieIconEnquadramento.png"/></div>
-							</div>
-							<div className="tutorialTexto">
-								<h1>Enquadre bem</h1>
-								<p>Seu rosto deve estar bem<br/>no centro da tela</p>
-							</div>
-						</div>
-					</div>
-					<div id="botaoAcaoTutorial" className="botaoAcao"><p id="textoBotaoAcaoTutorial" className="textoBotaoAcao centralizado">AVANÇAR</p></div>
-				</div>
 
+			<div id="selfieContainer" className="selfieContainer">
 				<div id="selfieWebcamParent" className="selfieWebcamParent">
 					<div className="selfieWebcam">
 						<div id="selfieContainerParent" className="selfieContainerParent">
 							<video className="posicaoAbsolute" playsInline autoPlay muted></video>
-							<canvas className="selfieCanvas"></canvas>
+							<canvas id="selfieCanvas" className="selfieCanvas"></canvas>
 						</div>
-
 						<div className="selfieMaskCanvas centralizado">
 							<img className="selfieMaskCanvas centralizado" id="selfieMaskId" src="selfie/img/SelfieFrameMask.png"/>
 							<img className="selfieMaskCanvas centralizado" id="selfieMaskIdDetails" src="selfie/img/SelfieFrameMaskDetails.png"/>
 							<img className="selfieMaskCanvas centralizado" id="selfieMaskIdOval" src="selfie/img/SelfieFrameMaskOval.png"/>
 						</div>
 					</div>
-
 					<div id="selfieAvisoContainer" className="webcamAviso"><p id="selfieTextoAviso">Aguarde ...</p></div>
-					<div id="botaoAcaoCancelar" className="botaoAcaoCancelar"><img id="botaoAcaoCancelarImagem" src="selfie/img/IconFechar.png"/></div>
+					<div id="selfieBotaoAcaoCancelar" className="selfieBotaoAcaoCancelar"><img id="botaoAcaoCancelarImagem" src="selfie/img/IconFechar.png"/></div>
 				</div>
 
-				<div id="selfieRotacioneAparelho" className="selfieRotacioneAparelho">
-					<div style={{textAlign: 'center'}} className="centralizado">
-						<img style={{width: '50%', height: '50%'}} src="selfie/img/SelfieErroRotacione.png"/>
-						<p>Rotacione seu aparelho para a vertical</p>
+				<div id="selfieLoading" className="selfieLoading">
+					<div className="centralizado">
+						<img src="selfie/img/Loading.gif" />
 					</div>
 				</div>
-
-				<div id="selfieEmAnalise" className="selfieEmAnalise">
-					<div style={{textAlign: 'center'}} className="centralizado">
-						<img src="selfie/img/IconEmAnalise.png"/>
-						<p><b>Em análise</b></p>
-						<p>Aguarde um instante</p>
-					</div>
-				</div>
-
-				<div id="selfieAlertaErro" className="selfieAlertaErro">
-					<div style={{textAlign: 'center'}} className="centralizado">
-						<img id="selfieAlertaErroImagem" src="selfie/img/IconFalha.png"/>
-						<p><b id="selfieAlertaErroHeader">Atenção</b></p>
-						<p id="selfieAlertaErroMensagem">...</p>
-					</div>
-					<div id="botaoAcaoTentarNovamente" className="botaoAcao"><p className="textoBotaoAcao centralizado">TENTAR NOVAMENTE</p></div>
-				</div>
+			
 			</div>
-
-			<div id="selfieResultado" className="selfieResultado">
-				<div style={{textAlign: 'center'}} className="centralizado">
-					<img id="selfieImagemResultado" style={{width: '50%', height: '50%'}} src=""/>
-
-					<p><b>Pronto!</b></p>
-					<p>Sua foto foi registrada com sucesso.</p>
-				</div>
-
-				<div id="botaoAcarFinalizarSelfie" className="botaoAcao"><p className="textoBotaoAcao centralizado">FINALIZAR</p></div>
-			</div>
-
-			<div id="loading" className="loading">
-				<div className="centralizado">
-					<img src="selfie/img/Loading.gif" />
-				</div>
-			</div>
+			
     	</div>
   	);
 }
