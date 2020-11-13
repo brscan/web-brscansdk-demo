@@ -1,7 +1,13 @@
 var CONFIGURACAO_DOCUMENTOS = {
     documentoUnico: true,
+    documentoCancelavel: false,
     documentoSemCPF: false,
+    limiteDeTentativasAutomaticas: 0,
+    timeOutCapturaAutomatica:0,
     documentoPath: "documento/img",
+    aceiteUploadManual: "image/jpeg,application/pdf",
+    aceiteUploadManualCamera: true,
+    somenteUploadManual: false,
     documentos :
     [
       {
@@ -10,9 +16,9 @@ var CONFIGURACAO_DOCUMENTOS = {
           "desc_sel" : "Escolha como quer enviar o seu RG",
           "id": "rg",
           "icones" : {
-              "frente" : "documento/img/IconRGFrente.png",
-              "verso" : "documento/img/IconRGVerso.png",
-              "frenteverso" : "documento/img/IconRGFrenteVerso.png"
+              "frente" : "/IconRGFrente.png",
+              "verso" : "/IconRGVerso.png",
+              "frenteverso" : "/IconRGFrenteVerso.png"
           }
       },
       {
@@ -21,22 +27,22 @@ var CONFIGURACAO_DOCUMENTOS = {
           "desc_sel" : "Escolha como quer enviar a sua CNH",
           "id" : "cnh",
           "icones" : {
-              "frente" : "documento/img/IconCNHFrente.png",
-              "verso" : "documento/img/IconCNHVerso.png",
-              "frenteverso" : "documento/img/IconCNHFrenteVerso.png"
+              "frente" : "/IconCNHFrente.png",
+              "verso" : "/IconCNHVerso.png",
+              "frenteverso" : "/IconCNHFrenteVerso.png"
           }
       },
       {
           "nome" : "OUTRO DOCUMENTO",
           "desc" : "OUTRO DOCUMENTO",
-          "desc_sel" : "Escolha como quer enviar outro documento",
+          "desc_sel" : "Escolha como quer enviar seu documento",
           "id" : "outro",
           "icones" : {
-              "frente" : "documento/img/IconOutroDocFrente.png",
-              "verso" : "documento/img/IconOutroDocVerso.png",
-              "frenteverso" : "documento/img/IconOutroDocFrenteVerso.png"
+              "frente" : "/IconOutroDocFrente.png",
+              "verso" : "/IconOutroDocVerso.png",
+              "frenteverso" : "/IconOutroDocFrenteVerso.png"
           }
-  
+
       }
     ]
   }

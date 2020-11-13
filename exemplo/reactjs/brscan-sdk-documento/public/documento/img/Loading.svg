@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; display: block; shape-rendering: auto; animation-play-state: running; animation-delay: 0s;" width="104px" height="104px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<g transform="translate(20 20)" style="animation-play-state: running; animation-delay: 0s;">
+  <rect x="-15" y="-15" width="30" height="30" fill="#353535" style="animation-play-state: running; animation-delay: 0s;">
+    <animateTransform attributeName="transform" type="scale" repeatCount="indefinite" calcMode="spline" dur="1s" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.4s" style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+  </rect></g>
+<g transform="translate(50 20)" style="animation-play-state: running; animation-delay: 0s;">
+  <rect x="-15" y="-15" width="30" height="30" fill="#666666" style="animation-play-state: running; animation-delay: 0s;">
+    <animateTransform attributeName="transform" type="scale" repeatCount="indefinite" calcMode="spline" dur="1s" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.3s" style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+  </rect></g>
+<g transform="translate(80 20)" style="animation-play-state: running; animation-delay: 0s;">
+  <rect x="-15" y="-15" width="30" height="30" fill="#9b9b9b" style="animation-play-state: running; animation-delay: 0s;">
+    <animateTransform attributeName="transform" type="scale" repeatCount="indefinite" calcMode="spline" dur="1s" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.2s" style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+  </rect></g>
+<g transform="translate(20 50)" style="animation-play-state: running; animation-delay: 0s;">
+  <rect x="-15" y="-15" width="30" height="30" fill="#666666" style="animation-play-state: running; animation-delay: 0s;">
+    <animateTransform attributeName="transform" type="scale" repeatCount="indefinite" calcMode="spline" dur="1s" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.3s" style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+  </rect></g>
+<g transform="translate(50 50)" style="animation-play-state: running; animation-delay: 0s;">
+  <rect x="-15" y="-15" width="30" height="30" fill="#9b9b9b" style="animation-play-state: running; animation-delay: 0s;">
+    <animateTransform attributeName="transform" type="scale" repeatCount="indefinite" calcMode="spline" dur="1s" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.2s" style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+  </rect></g>
+<g transform="translate(80 50)" style="animation-play-state: running; animation-delay: 0s;">
+  <rect x="-15" y="-15" width="30" height="30" fill="#d4d4d4" style="animation-play-state: running; animation-delay: 0s;">
+    <animateTransform attributeName="transform" type="scale" repeatCount="indefinite" calcMode="spline" dur="1s" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.1s" style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+  </rect></g>
+<g transform="translate(20 80)" style="animation-play-state: running; animation-delay: 0s;">
+  <rect x="-15" y="-15" width="30" height="30" fill="#9b9b9b" style="animation-play-state: running; animation-delay: 0s;">
+    <animateTransform attributeName="transform" type="scale" repeatCount="indefinite" calcMode="spline" dur="1s" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.2s" style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+  </rect></g>
+<g transform="translate(50 80)" style="animation-play-state: running; animation-delay: 0s;">
+  <rect x="-15" y="-15" width="30" height="30" fill="#d4d4d4" style="animation-play-state: running; animation-delay: 0s;">
+    <animateTransform attributeName="transform" type="scale" repeatCount="indefinite" calcMode="spline" dur="1s" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="-0.1s" style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+  </rect></g>
+<g transform="translate(80 80)" style="animation-play-state: running; animation-delay: 0s;">
+  <rect x="-15" y="-15" width="30" height="30" fill="#ffffff" style="animation-play-state: running; animation-delay: 0s;">
+    <animateTransform attributeName="transform" type="scale" repeatCount="indefinite" calcMode="spline" dur="1s" values="1;1;0.2;1;1" keyTimes="0;0.2;0.5;0.8;1" keySplines="0.5 0.5 0.5 0.5;0 0.1 0.9 1;0.1 0 1 0.9;0.5 0.5 0.5 0.5" begin="0s" style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+  </rect></g>
+
+<!-- [ldio] generated by https://loading.io/ --></svg>

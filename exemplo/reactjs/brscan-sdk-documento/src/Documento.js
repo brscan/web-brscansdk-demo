@@ -49,7 +49,8 @@ function DocumentoView(props) {
 		window.addEventListener('load', carregaDocumento);
 
 		return () => {
-			window.removeEventListener('load', removeDocumento)  
+			window.removeEventListener('load', carregaDocumento)  
+			removeDocumento();
 		}
 
 	}, []);
@@ -57,7 +58,7 @@ function DocumentoView(props) {
 	const carregaDocumento = () => {
 		try {
             let documento = new window.Documento(
-				//chave
+				// incluir chave
 				" ",
    
 			 	document.getElementById("documentoContainer")
@@ -266,12 +267,12 @@ function DocumentoView(props) {
 				<div id="botaoAcarFinalizarDocumento" className="botaoAcao"><p className="textoBotaoAcao centralizado">FINALIZAR</p></div>
 			</div>
 
-			<div id="documentoLoading" className="documentoLoading">
-				<div className="centralizado">
-				<img src="documento/img/Loading.gif" />
-				</div>
-			</div>
+		</div>
 
+		<div id="documentoLoading" className="documentoLoading">
+			<div className="centralizado">
+			<img src="documento/img/Loading.gif" />
+			</div>
 		</div>
 
     </div>

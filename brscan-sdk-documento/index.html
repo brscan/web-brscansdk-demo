@@ -198,17 +198,18 @@
         <div id="botaoAcarFinalizarDocumento" class="botaoAcao"><p class="textoBotaoAcao centralizado">FINALIZAR</p></div>
       </div>
 
-      <div id="documentoLoading" class="documentoLoading">
-        <div class="centralizado">
-          <img src="documento/img/Loading.gif" />
-        </div>
-      </div>
+    </div>
 
+    <div id="documentoLoading" class="documentoLoading">
+      <div class="centralizado">
+        <img src="documento/img/Loading.svg" />
+      </div>
     </div>
 
 		<script>
       document.addEventListener('DOMContentLoaded', function() {
         var documento = new Documento(
+          // incluir chave
       	   " ",
           document.getElementById("documentoContainer")
         );
