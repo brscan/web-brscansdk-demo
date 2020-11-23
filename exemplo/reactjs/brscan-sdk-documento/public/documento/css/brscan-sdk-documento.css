@@ -7,7 +7,7 @@
 .logo {
     background:   url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAAAqCAYAAABfjB7GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATGSURBVHgB7VuNVdswED54HYAR3AkaJsDdIEyAOwEwQcIEkAkSJgidwOkEsEHcCcgGVx1SQDmfZMlRfl6q7z09N9bp99Od7s4UICMjoz/OICMIiDhVj8J6NTk7O3uBjOOAImiJm6hgDziHjINAETwMkcsEHQCKnJF6zM0zIwVSmTjV7pb1k0lKgRQECeSsMXC1ySZuTzCa8iRUXStv8A0ytsM2GqRkHx2aE+QoZASgL0GkOQIx77gnN/2/QR+CHHdOJmcXiCUoFTnfQgVRexqlKleqcK/jWRW66Bbqwlt19EN295G9vj+ltAndOepxJ1T9il1nJ0FqsEI9yAOhjb1wiK19+UbJP6jni4co6qMQ3h07JrA5T9HzQu2tJSGnE2qwG6OWsZgbYqU+K0G+ghMAuuOc3t7auWcwOgkz6He6aUKvLpJOGH9V4ZbjeheaM8Q0IO27YH2frAYR2N6lj3NoQz0bTqZrIMhX6DaFNZMPJojGMmO+O8ivfZtgNmvgqavX/ThkCtRB5isbe2nalo52Je4qCDUDS5sx7GhHi3lCGUNLLoggdEff6JjfQJhPaxzzfsne80NEh26EYSDyStgHUDZtrcV72tPC5tIiLJlOgjCOHHGeKBM0Qlkba7aGGuPHrmDXUINMhcHHkX0UKG/CwNR7CUJt1lzmcont029jyuYRitq06UOOjeRmjcdBXFPII3mCCCiPpVETvRSqVhAGmgP3HCnmoGB2QT9QOx5jVW6FtjFYWP0TKtDBuE+WUEA7liOM1Nw6g/VecJy4GhIDuzWoFuoHIM+3pWms3oUZtu8s0tylIPuKsmM0dvRdMdk5fml+SNkIcoNTPXsEZSKe2btGkCugX4xGMcmdcMoH0NaKBnQc09gvTduxOQ/8iyileWbWbylz4sPGmo6OoLUZ40DtKRWq/AC9iBL64d5hgm6Edy1ybKg6IumKzYW0q/C1i8ExatAHUN8ztGkl6MxECiw8G1fwF4FfOknbS/aOfs8gAWyCVqbYKlbAAWC0ZQ6HTaLOAuW6SPwNsokO6u+TIFJ7tTEL2DytdNEOY3NJqPN4JXv94DJfrG0BfnIa0Iv4A+3PFilRpJBTa47ygr0gD0LyYiL7kLy09476yqoXA13TrrTkRC+to97plWI7nYMYkOxFOajeWZqHLjgpSAwiCXUmQmo/tmS6COLtl8gSrkYuNUGS2zzvWK8YVENCbHxuMN7NgyBHE2nFA2yylXpQJM83MzbY5e0bh9dVQFosoB1M04G7k4TNoZFMcdR10AsoqzviVwZ5ijpje2P+vUQ3xqzvLg3icGWaa2kwqz468EbZvH60Q73edRmhOx0Vm82IB2pTt8TtMRb6jiWIcGvV0wbVDrltCfJ9agnBFPYF3J6ksaPfLoL6ZLI/YfXTK3WF/T9WktVJHhY4P3kbu09JzwnEgdr9pCgb+mECYYnVFYQnYINhQorryL7pj2Qud5Ek9f5tNg2oCl2SRBRNvHGI0sQoNiEH43tIvOMZszHjLRwijZnLJeyAIDOHdf++w7JeM6WDrmFHiP4vkKgvwdbngNDTY9rzOOFJao9f+TcqjSmfY6H2sOy5rNaBoTE3Fat/6xF0F2b80h4HtNY0kJGRkZGRcaL4BxHjo2DtqN90AAAAAElFTkSuQmCC')
      no-repeat;
-     
+
     object-fit: contain;
 
     width: 104px;
@@ -25,12 +25,11 @@
     height: 100%;
 
     padding: 0px;
-    margin: 0px;    
+    margin: 0px;
 
     background-color: var(--cor-primary);
 
     -webkit-text-size-adjust: none;
-    touch-action: manipulation;
 
     font-family: 'IBM Plex Mono';
     color: var(--cor-text);
@@ -42,6 +41,8 @@
     user-select: none;
 
     display: none;
+
+    touch-action: none;
 }
 
 h1 {
@@ -95,7 +96,13 @@ p {
 .documentoTutorial {
     margin-top: 60px;
     text-align: center;
-    
+
+}
+
+.documentoTutorialIcone {
+    width: 175px;
+    height: 175px;
+    object-fit: contain;
 }
 
 .documentoTutorialSlider {
@@ -104,14 +111,14 @@ p {
 }
 
 .documentoTutorial h1 {
-    font-size: 24px;
+    font-size: 16px;
     color: var(--cor-background);
 }
 
 .documentoTutorial p {
-    font-size: 14px;
+    font-size: 12px;
     color: var(--cor-background);
-    padding: 20px;
+    padding: 10px;
 }
 
 
@@ -141,8 +148,10 @@ p {
     height: 64px;
     background-color: var(--cor-primary);
     cursor: pointer;
+}
 
-    
+.documentoBotaoAcaoEnviar {
+    background-color: var(--cor-background) !important;
 }
 
 .botaoAcaoEnviar {
@@ -154,7 +163,7 @@ p {
     color: var(--cor-background);
     width: 100%;
     text-align: center;
-    
+
     top: 25%;
     font-size: 12px;
 }
@@ -167,6 +176,8 @@ p {
     height: 64px;
     background-color: var(--cor-background);
     cursor: pointer;
+
+    z-index: 9999;
 }
 
 .textoBotaoAcaoTutorial {
@@ -191,7 +202,7 @@ p {
     color: var(--cor-text);
     width: 100%;
     text-align: center;
-    
+
     top: 25%;
     font-size: 12px;
 
@@ -215,26 +226,19 @@ p {
     width:100%;
     height:100%;
 }
-   
+
 .loader {
-    border:8px solid #CF352E; 
-    border-top: 8px solid transparent; 
+    border:8px solid #CF352E;
+    border-top: 8px solid transparent;
     border-radius: 50%;
     width: 20px;
     height: 20px;
     animation: spin 2s linear infinite;
 }
-   
-.loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .documentoLoading {
     background-color: var(--cor-primary);
-    
+
     width: 100%;
     height: 100%;
 
@@ -276,10 +280,10 @@ p {
 }
 
 .selecaoDocumentoTipo {
-    
+
 }
 
-.selecaoDocumentoTipo h1 {    
+.selecaoDocumentoTipo h1 {
     color: #fff;
     position: relative;
     top: 60px;
@@ -411,7 +415,7 @@ p {
     background-color: var(--cor-primary);
 }
 
-.documentoEmAnalise h1 { 
+.documentoEmAnalise h1 {
     color: var(--cor-background);
 }
 
@@ -438,6 +442,21 @@ p {
 }
 
 .uploadAutomatico {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    display: none;
+
+    background-color: #000;
+}
+
+
+.uploadQrCode {
     position: absolute;
 
     width: 100%;
@@ -553,7 +572,7 @@ p {
 .reviewImagem {
     height: 260px;
     width: 300px;
-    
+
     object-fit: scale-down;
 }
 
@@ -567,18 +586,6 @@ p {
     bottom: 0px;
     left: 0px;
     width: 100%
-}
-
-.loading {
-    background-color: var(--cor-background);
-    
-    width: 100%;
-    height: 100%;
-
-    top: 0px;
-    left: 0px;
-
-    position: absolute;
 }
 
 .scroll-content {

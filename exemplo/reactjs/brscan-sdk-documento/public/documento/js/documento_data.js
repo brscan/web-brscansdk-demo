@@ -2,8 +2,9 @@ var CONFIGURACAO_DOCUMENTOS = {
     documentoUnico: true,
     documentoCancelavel: false,
     documentoSemCPF: false,
+    documentoSemReview: true,
     limiteDeTentativasAutomaticas: 0,
-    timeOutCapturaAutomatica:0,
+    timeOutCapturaAutomatica: 0,
     documentoPath: "documento/img",
     aceiteUploadManual: "image/jpeg,application/pdf",
     aceiteUploadManualCamera: true,
@@ -42,7 +43,6 @@ var CONFIGURACAO_DOCUMENTOS = {
               "verso" : "/IconOutroDocVerso.png",
               "frenteverso" : "/IconOutroDocFrenteVerso.png"
           }
-
       }
     ]
   }
