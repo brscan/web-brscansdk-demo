@@ -29,8 +29,11 @@ const removeElement = (arquivo, element) => {
 
 appendElement("selfie/js/common/getusermedia.js", "script");
 appendElement("selfie/js/common/polyfil.js", "script");
-appendElement("selfie/js/common/pico.js", "script");
 appendElement("selfie/js/common/tinyslider.js", "script");
+
+appendElement("selfie/js/tfjs.js", "script");
+appendElement("https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@2.7.0/dist/tf-backend-wasm.js", "script");
+appendElement("selfie/js/blazeface.js", "script");
 
 appendElement("selfie/js/selfie_data.js", "script");
 appendElement("selfie/js/selfie.min.js", "script");
@@ -74,7 +77,10 @@ function SelfieView(props) {
 				// falha
 				(erroId, mensagem) => {
 					selfieErro(erroId, mensagem);
-				}
+				},
+
+				// exibe tutorial
+				false
 			);
         }
         catch(erro) {
@@ -84,7 +90,9 @@ function SelfieView(props) {
 	}
 
 	const removeSelfie = () => {
-		removeElement("selfie/js/selfie_libs.js", "script");
+		removeElement("selfie/js/tfjs.js", "script");
+		removeElement("https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@2.7.0/dist/tf-backend-wasm.js", "script");
+		removeElement("selfie/js/blazeface.js", "script");
 		removeElement("selfie/js/selfie_data.js", "script");
 		removeElement("selfie/js/selfie.min.js", "script");
 
@@ -97,30 +105,51 @@ function SelfieView(props) {
 	return (
         <div className="App">
 
-			<div id="selfieContainer" className="selfieContainer">
-				<div id="selfieWebcamParent" className="selfieWebcamParent">
-					<div className="selfieWebcam">
-						<div id="selfieContainerParent" className="selfieContainerParent">
-							<video className="posicaoAbsolute" playsInline autoPlay muted></video>
-							<canvas id="selfieCanvas" className="selfieCanvas"></canvas>
-						</div>
-						<div className="selfieMaskCanvas centralizado">
-							<img className="selfieMaskCanvas centralizado" id="selfieMaskId" src="selfie/img/SelfieFrameMask.png"/>
-							<img className="selfieMaskCanvas centralizado" id="selfieMaskIdDetails" src="selfie/img/SelfieFrameMaskDetails.png"/>
-							<img className="selfieMaskCanvas centralizado" id="selfieMaskIdOval" src="selfie/img/SelfieFrameMaskOval.png"/>
-						</div>
-					</div>
-					<div id="selfieAvisoContainer" className="webcamAviso"><p id="selfieTextoAviso">Aguarde ...</p></div>
-					<div id="selfieBotaoAcaoCancelar" className="selfieBotaoAcaoCancelar"><img id="botaoAcaoCancelarImagem" src="selfie/img/IconFechar.png"/></div>
+<div id="selfieContainer" className="selfieContainer">
+		<div id="selfieWebcamParent" className="selfieWebcamParent">
+			<div className="selfieWebcam">
+				<div id="selfieContainerParent" className="selfieContainerParent">
+					<video className="posicaoAbsolute" playsInline autoPlay muted></video>
+					<canvas id="selfieCanvas" className="selfieCanvas" width="640" height="480"></canvas>
 				</div>
-
-				<div id="selfieLoading" className="selfieLoading">
-					<div className="centralizado">
-						<img src="selfie/img/Loading.gif" />
-					</div>
+				<div className="selfieMaskCanvas semOverflow centralizado">
+					<img className="selfieMaskCanvas centralizado" id="selfieMaskId" src="selfie/img/SelfieFrameMask.png"/>
+					<img className="selfieMaskCanvas centralizado" id="selfieMaskIdDetails" src="selfie/img/SelfieFrameMaskDetails.png"/>
+					<img className="selfieMaskCanvas centralizado" id="selfieMaskIdOval" src="selfie/img/SelfieFrameMaskOval.png"/>
+				</div>
+			</div>
+			
+			<div id="uploadManual" className="uploadManualContainer">  
+				<input className="hidden" id="docFileInput" type="file" capture="user" accept="image/jpeg" />
+		
+				<div id="uploadManualButton" className="uploadManualButton centralizado">
+					<img className="iconeDoc" src="selfie/img/IconGallery.png"/>
+					<p className="corBranco">Escolher arquivo</p>
 				</div>
 			
+				<div id="uploadManualCancelar" className="uploadManualCancelar">
+					<img src="selfie/img/IconFechar.png" />
+				</div>
 			</div>
+			
+			<div id="documentoQuestaoTimeout" className="documentoQuestaoTimeout">
+				<div className="centralizado textCenter">
+				  <h1>Não foi possível capturar sua Selfie. Você será direcionado para capturar no aplicativo de câmera do seu aparelho.</h1>
+				  <div>
+					<b><p id="aceitaUploadManual">Ok</p></b> <b><p id="declinaUploadManual">Cancelar</p></b>
+				  </div>
+				</div>
+			  </div>
+
+			<div id="selfieAvisoContainer" className="webcamAviso"><p className="selfieTextoAviso" id="selfieTextoAviso">Aguarde ...</p></div>
+			<div id="selfieBotaoAcaoCancelar" className="selfieBotaoAcaoCancelar"><img id="botaoAcaoCancelarImagem" src="selfie/img/IconFechar.png"/></div>
+		</div>
+	</div>
+	<div id="selfieLoading" className="selfieLoading">
+		<div className="centralizado">
+			<img src="selfie/img/Loading.svg" />
+		</div>
+	</div>
 			
     	</div>
   	);

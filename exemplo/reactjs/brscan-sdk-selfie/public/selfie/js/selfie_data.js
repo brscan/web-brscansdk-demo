@@ -1,25 +1,29 @@
-const SELFIE_DEBUG = false;
+let SELFIE_DEBUG = false;
 
-const SELFIE_EXECUTA_TUTORIAL = true;
-const SELFIE_EXIBE_ERROS = true;
+let SELFIE_EXECUTA_TUTORIAL = false;
+let SELFIE_EXIBE_ERROS = true;
 
-const SELFIE_AGUARDANDO_ROSTO = 'Aguardando rosto...';
-const SELFIE_AVISO_ENCAIXE_ROSTO = 'Encaixe o rosto';
-const SELFIE_AVISO_AFASTE_ROSTO = 'Afaste seu rosto';
-const SELFIE_AVISO_APROXIME_ROSTO = 'Aproxime seu rosto';
-const SELFIE_AVISO_AGUARDE = 'Aguarde ...';
-const SELFIE_AVISO_AFASTE = 'Afaste o rosto';
-const SELFIE_AVISO_APROXIME = 'Aproxime o rosto';
-const SELFIE_AVISO_SELFIE_CAPTURADA = 'Sucesso!';
-const SELFIE_AVISO_SELFIE_FIQUE_SOZINHO = 'Fique sozinho na imagem!';
-const SELFIE_AVISO_NENHUM_ROSTO_ENCONTRADO = 'Apareca para a camêra!';
-const SELFIE_CENTRALIZE_O_ROSTO = 'Centralize seu rosto';
+let SELFIE_AGUARDANDO_ROSTO = 'Aguardando rosto...';
+let SELFIE_AVISO_ENCAIXE_ROSTO = 'Encaixe o rosto';
+let SELFIE_AVISO_AFASTE_ROSTO = 'Afaste seu rosto';
+let SELFIE_AVISO_APROXIME_ROSTO = 'Aproxime seu rosto';
+let SELFIE_AVISO_AGUARDE = 'Aguarde ...';
+let SELFIE_AVISO_AFASTE = 'Afaste o rosto';
+let SELFIE_AVISO_APROXIME = 'Aproxime o rosto';
+let SELFIE_AVISO_SELFIE_CAPTURADA = 'Sucesso!';
+let SELFIE_AVISO_SELFIE_FIQUE_SOZINHO = 'Fique sozinho na imagem!';
+let SELFIE_AVISO_NENHUM_ROSTO_ENCONTRADO = 'Apareca para a camêra!';
+let SELFIE_CENTRALIZE_O_ROSTO = 'Centralize seu rosto';
 
-const SELFIE_ILUMINACAO_MINIMA = 70;
-const SELFIE_NUMERO_TENTATIVAS = 3;
+let SELFIE_ILUMINACAO_MINIMA = 0;
+let SELFIE_NUMERO_TENTATIVAS = 0;
 
-const SELFIE_ERRO_ID_NUMERO_TENTATIVAS_EXCEDIDO = 1000;
-const SELFIE_ERRO_ID_CAMERA_INVALIDA = 1001;
-const SELFIE_ERRO_ID_CANCELADA_POR_USUARIO = 1002;
+let SELFIE_TIMEOUT = 0;
 
-const SELFIE_IMG_PATH = "selfie/img";
+let SELFIE_ERRO_ID_NUMERO_TENTATIVAS_EXCEDIDO = 1000;
+let SELFIE_ERRO_ID_CAMERA_INVALIDA = 1001;
+let SELFIE_ERRO_ID_CANCELADA_POR_USUARIO = 1002;
+
+let SELFIE_CANCELAVEL = false;
+
+let SELFIE_IMG_PATH = "selfie/img";

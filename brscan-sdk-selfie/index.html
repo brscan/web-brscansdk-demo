@@ -16,8 +16,13 @@
 	<script type="text/javascript" src="selfie/js/common/pico.js"></script>
 	<script type="text/javascript" src="selfie/js/common/tinyslider.js"></script>
 
+	<script type="text/javascript" src="selfie/js/tfjs.js"></script>
+	
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@2.7.0/dist/tf-backend-wasm.js"></script>
+	<script type="text/javascript" src="selfie/js/blazeface.js"></script>
+
 	<script src="selfie/js/selfie_data.js"></script>
-	<script src="selfie/js/selfie.min.js"></script>
+	<script src="selfie/js/selfie.js"></script>
 </head>
 
 <body>
@@ -28,22 +33,43 @@
 					<video class="posicaoAbsolute" playsinline autoplay muted></video>
 					<canvas id="selfieCanvas" class="selfieCanvas"></canvas>
 				</div>
-				<div class="selfieMaskCanvas centralizado">
+				<div class="selfieMaskCanvas semOverflow centralizado">
 					<img class="selfieMaskCanvas centralizado" id="selfieMaskId" src="selfie/img/SelfieFrameMask.png"/>
 					<img class="selfieMaskCanvas centralizado" id="selfieMaskIdDetails" src="selfie/img/SelfieFrameMaskDetails.png"/>
 					<img class="selfieMaskCanvas centralizado" id="selfieMaskIdOval" src="selfie/img/SelfieFrameMaskOval.png"/>
 				</div>
 			</div>
-			<div id="selfieAvisoContainer" class="webcamAviso"><p id="selfieTextoAviso">Aguarde ...</p></div>
+			
+			<div id="uploadManual" class="uploadManualContainer">  
+				<input class="hidden" id="docFileInput" type="file" capture="user" accept="image/jpeg" />
+		
+				<div id="uploadManualButton" class="uploadManualButton centralizado">
+					<img class="iconeDoc" src="selfie/img/IconGallery.png"/>
+					<p class="corBranco">Escolher arquivo</p>
+				</div>
+			
+				<div id="uploadManualCancelar" class="uploadManualCancelar">
+					<img src="selfie/img/IconFechar.png" />
+				</div>
+			</div>
+			
+			<div id="documentoQuestaoTimeout" class="documentoQuestaoTimeout">
+				<div class="centralizado textCenter">
+				  <h1>Não foi possível capturar sua Selfie. Você será direcionado para capturar no aplicativo de câmera do seu aparelho.</h1>
+				  <div>
+					<b><p id="aceitaUploadManual">Ok</p></b> <b><p id="declinaUploadManual">Cancelar</p></b>
+				  </div>
+				</div>
+			  </div>
+
+			<div id="selfieAvisoContainer" class="webcamAviso"><p class="selfieTextoAviso" id="selfieTextoAviso">Aguarde ...</p></div>
 			<div id="selfieBotaoAcaoCancelar" class="selfieBotaoAcaoCancelar"><img id="botaoAcaoCancelarImagem" src="selfie/img/IconFechar.png"/></div>
 		</div>
-
-		<div id="selfieLoading" class="selfieLoading">
-			<div class="centralizado">
-				<img src="selfie/img/Loading.gif" />
-			</div>
+	</div>
+	<div id="selfieLoading" class="selfieLoading">
+		<div class="centralizado">
+			<img src="selfie/img/Loading.svg" />
 		</div>
-	
 	</div>
 </body>
 
@@ -59,12 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
 			// elemento div
 			document.getElementById('selfieContainer')
 
-
 		);
 
 		selfie.iniciaSelfie(
 			// sucesso
 			(selfie) => {
+				console.log(selfie);
 				alert('Selfie recebida com sucesso');
 
 			},
@@ -72,9 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			// falha
 			(erroId, mensagem) => {
 				console.log(erroId, mensagem);
-				alert("Atenção: " + mensagem);
+				//alert("Atenção: " + mensagem);
 
-			}
+			},
+
+			false
 		);
 	}
 	catch(erro) {

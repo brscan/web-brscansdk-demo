@@ -59,7 +59,7 @@ function DocumentoView(props) {
 		try {
             let documento = new window.Documento(
 				// incluir chave
-				" ",
+				"4FA79CFD543A27D429BE12FFB447742980D33F6624F81D66121EFBCA17B57DDB",
    
 			 	document.getElementById("documentoContainer")
    	   		);
