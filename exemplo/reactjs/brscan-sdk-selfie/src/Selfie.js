@@ -113,9 +113,9 @@ function SelfieView(props) {
 					<canvas id="selfieCanvas" className="selfieCanvas" width="640" height="480"></canvas>
 				</div>
 				<div className="selfieMaskCanvas semOverflow centralizado">
-					<img className="selfieMaskCanvas centralizado" id="selfieMaskId" src="selfie/img/SelfieFrameMask.png"/>
-					<img className="selfieMaskCanvas centralizado" id="selfieMaskIdDetails" src="selfie/img/SelfieFrameMaskDetails.png"/>
-					<img className="selfieMaskCanvas centralizado" id="selfieMaskIdOval" src="selfie/img/SelfieFrameMaskOval.png"/>
+					<img alt="" className="selfieMaskCanvas centralizado" id="selfieMaskId" src="selfie/img/SelfieFrameMask.png"/>
+					<img alt="" className="selfieMaskCanvas centralizado" id="selfieMaskIdDetails" src="selfie/img/SelfieFrameMaskDetails.png"/>
+					<img alt="" className="selfieMaskCanvas centralizado" id="selfieMaskIdOval" src="selfie/img/SelfieFrameMaskOval.png"/>
 				</div>
 			</div>
 			
@@ -123,12 +123,12 @@ function SelfieView(props) {
 				<input className="hidden" id="docFileInput" type="file" capture="user" accept="image/jpeg" />
 		
 				<div id="uploadManualButton" className="uploadManualButton centralizado">
-					<img className="iconeDoc" src="selfie/img/IconGallery.png"/>
+					<img alt="" className="iconeDoc" src="selfie/img/IconGallery.png"/>
 					<p className="corBranco">Escolher arquivo</p>
 				</div>
 			
 				<div id="uploadManualCancelar" className="uploadManualCancelar">
-					<img src="selfie/img/IconFechar.png" />
+					<img alt="" src="selfie/img/IconFechar.png" />
 				</div>
 			</div>
 			
@@ -142,12 +142,37 @@ function SelfieView(props) {
 			  </div>
 
 			<div id="selfieAvisoContainer" className="webcamAviso"><p className="selfieTextoAviso" id="selfieTextoAviso">Aguarde ...</p></div>
-			<div id="selfieBotaoAcaoCancelar" className="selfieBotaoAcaoCancelar"><img id="botaoAcaoCancelarImagem" src="selfie/img/IconFechar.png"/></div>
+			<div id="selfieBotaoAcaoCancelar" className="selfieBotaoAcaoCancelar"><img alt="" id="botaoAcaoCancelarImagem" src="selfie/img/IconFechar.png"/></div>
 		</div>
 	</div>
+	
+	<div id="selfieRotacioneAparelho" className="selfieRotacioneAparelho">
+		<div className="centralizado alignCenter">
+			<img alt="" src="selfie/img/SelfieErroRotacione.png"/>
+			<p>Rotacione seu aparelho para a vertical</p>
+		</div>
+	</div>
+
+	<div id="selfieEmAnalise" className="selfieEmAnalise">
+		<div className="centralizado alignCenter">
+			<img alt="" src="selfie/img/IconEmAnalise.png"/>
+			<p><b>Em análise</b></p>
+			<p>Aguarde um instante</p>
+		</div>
+	</div>
+
+	<div id="selfieAlertaErro" className="selfieAlertaErro">
+		<div className="centralizado alignCenter">
+			<img alt="" id="selfieAlertaErroImagem" src="selfie/img/IconFalha.png"/>
+			<p><b id="selfieAlertaErroHeader">Atenção</b></p>
+			<p id="selfieAlertaErroMensagem">...</p>
+		</div>
+		<div id="botaoAcaoTentarNovamente" className="botaoAcao"><p className="selfieTextoBotaoAcao centralizado">TENTAR NOVAMENTE</p></div>
+	</div>
+
 	<div id="selfieLoading" className="selfieLoading">
 		<div className="centralizado">
-			<img src="selfie/img/Loading.svg" />
+			<img alt="" src="selfie/img/Loading.svg" />
 		</div>
 	</div>
 			

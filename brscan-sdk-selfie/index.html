@@ -17,8 +17,7 @@
 	<script type="text/javascript" src="selfie/js/common/tinyslider.js"></script>
 
 	<script type="text/javascript" src="selfie/js/tfjs.js"></script>
-	
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@2.7.0/dist/tf-backend-wasm.js"></script>
+	<script type="text/javascript" src="selfie/js/tf-backend-wasm.min.js"></script>
 	<script type="text/javascript" src="selfie/js/blazeface.js"></script>
 
 	<script src="selfie/js/selfie_data.js"></script>
@@ -66,6 +65,31 @@
 			<div id="selfieBotaoAcaoCancelar" class="selfieBotaoAcaoCancelar"><img id="botaoAcaoCancelarImagem" src="selfie/img/IconFechar.png"/></div>
 		</div>
 	</div>
+
+	<div id="selfieRotacioneAparelho" class="selfieRotacioneAparelho">
+		<div class="centralizado alignCenter">
+			<img src="selfie/img/SelfieErroRotacione.png"/>
+			<p>Rotacione seu aparelho para a vertical</p>
+		</div>
+	</div>
+
+	<div id="selfieEmAnalise" class="selfieEmAnalise">
+		<div class="centralizado alignCenter">
+			<img src="selfie/img/IconEmAnalise.png"/>
+			<p><b>Em análise</b></p>
+			<p>Aguarde um instante</p>
+		</div>
+	</div>
+
+	<div id="selfieAlertaErro" class="selfieAlertaErro">
+		<div class="centralizado alignCenter">
+			<img id="selfieAlertaErroImagem" src="selfie/img/IconFalha.png"/>
+			<p><b id="selfieAlertaErroHeader">Atenção</b></p>
+			<p id="selfieAlertaErroMensagem">...</p>
+		</div>
+		<div id="botaoAcaoTentarNovamente" class="botaoAcao"><p class="selfieTextoBotaoAcao centralizado">TENTAR NOVAMENTE</p></div>
+	</div>
+
 	<div id="selfieLoading" class="selfieLoading">
 		<div class="centralizado">
 			<img src="selfie/img/Loading.svg" />
@@ -100,9 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				console.log(erroId, mensagem);
 				//alert("Atenção: " + mensagem);
 
-			},
-
-			false
+			}
 		);
 	}
 	catch(erro) {
