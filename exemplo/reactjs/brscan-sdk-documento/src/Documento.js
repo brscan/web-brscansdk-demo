@@ -59,7 +59,7 @@ function DocumentoView(props) {
 		try {
             let documento = new window.Documento(
 				// incluir chave
-				"4FA79CFD543A27D429BE12FFB447742980D33F6624F81D66121EFBCA17B57DDB",
+				" ",
    
 			 	document.getElementById("documentoContainer")
    	   		);
@@ -95,71 +95,71 @@ function DocumentoView(props) {
 
 	return (
     <div className="App">        
-		<div id="documentoContainer" class="documentoContainer">
-			<div id="selecaoDocumentoContainer" class="selecaoDocumentoContainer">
+		<div id="documentoContainer" className="documentoContainer">
+			<div id="selecaoDocumentoContainer" className="selecaoDocumentoContainer">
 
-			<div id="selecaoDocumento" class="selecaoDocumento">
-				<div id="selecaoDocumentoTipo" class="selecaoDocumentoTipo">
+			<div id="selecaoDocumento" className="selecaoDocumento">
+				<div id="selecaoDocumentoTipo" className="selecaoDocumentoTipo">
 				<h1>
 					Selecione o tipo de<br/>documento.
 				</h1>
 		
-				<div class="selecaoDocumentoTipoContainer">
+				<div className="selecaoDocumentoTipoContainer">
 		
-					<div id="selecaoDocumentoBotoes" class="selecaoDocumentoBotoes">
+					<div id="selecaoDocumentoBotoes" className="selecaoDocumentoBotoes">
 		
 					</div>
 		
 				</div>
 				</div>
 		
-				<div id="selecaoDocumentoLado" class="selecaoDocumentoLado">
+				<div id="selecaoDocumentoLado" className="selecaoDocumentoLado">
 		
-				<h1 class="textoDocumentoLado" id="textoDocumentoLado">
+				<h1 className="textoDocumentoLado" id="textoDocumentoLado">
 		
 				</h1>
 		
-				<div class="botaoAcaoRetornarSelecaoDocumento" id="botaoAcaoRetornarSelecaoDocumento">
-					<img src="documento/img/IconLeft.png"/>
+				<div className="botaoAcaoRetornarSelecaoDocumento" id="botaoAcaoRetornarSelecaoDocumento">
+					<img alt="" src="documento/img/IconLeft.png"/>
 				</div>
 		
-				<div class="selecaoDocumentoBotoes">
+				<div className="selecaoDocumentoBotoes">
 		
-					<div id="selecaoDocumentoFrente" class="selecaoDocumentoTipoBotao">
-					<img class="iconeDoc" id="iconeFrente" src=""/>
-					<p class="selecaoDocumentoTipoTexto">FOTO DA FRENTE</p>
+					<div id="selecaoDocumentoFrente" className="selecaoDocumentoTipoBotao">
+					<img alt="" className="iconeDoc" id="iconeFrente" src=""/>
+					<p className="selecaoDocumentoTipoTexto">FOTO DA FRENTE</p>
 					</div>
 		
 		
-					<div id="selecaoDocumentoVerso" class="selecaoDocumentoTipoBotao">
-					<div class="selecaoDocumentoTipoLinha">
+					<div id="selecaoDocumentoVerso" className="selecaoDocumentoTipoBotao">
+					<div className="selecaoDocumentoTipoLinha">
 					</div>
 		
-					<img class="iconeDoc" id="iconeVerso" src=""/>
-					<p class="selecaoDocumentoTipoTexto">FOTO DO VERSO</p>
+					<img alt="" alt="" className="iconeDoc" id="iconeVerso" src=""/>
+					<p className="selecaoDocumentoTipoTexto">FOTO DO VERSO</p>
 					</div>
 		
-					<div id="selecaoDocumentoFrenteVerso" class="selecaoDocumentoTipoBotao">
-					<div class="selecaoDocumentoTipoLinha">
+					<div id="selecaoDocumentoFrenteVerso" className="selecaoDocumentoTipoBotao">
+					<div className="selecaoDocumentoTipoLinha">
 					</div>
 		
-					<img class="iconeDoc" id="iconeFrenteVerso" src=""/>
-					<p class="selecaoDocumentoTipoTexto">FRENTE E VERSO</p>
+					<img alt="" className="iconeDoc" id="iconeFrenteVerso" src=""/>
+					<p className="selecaoDocumentoTipoTexto">FRENTE E VERSO</p>
 					</div>
 		
-					<div id="selecaoDocumentoCnhDigital" class="selecaoDocumentoTipoBotao">
-					<img class="iconeDoc" id="iconeCnhDigital" src=""/>
-					<p class="selecaoDocumentoTipoTexto">CNH DIGITAL</p>
+					<div id="selecaoDocumentoCnhDigital" className="selecaoDocumentoTipoBotao">
+					<img alt="" className="iconeDoc" id="iconeCnhDigital" src=""/>
+					<p className="selecaoDocumentoTipoTexto">CNH DIGITAL</p>
 					</div>
 		
-					<div id="ladoCPF" class="ladoCPF">
+					<div id="ladoCPF" className="ladoCPF">
 		
-					<div class="selecaoDocumentoTipoLinha">
+					<div className="selecaoDocumentoTipoLinha">
 					</div>
 		
-					<div id="selecaoDocumentoCPF" class="selecaoDocumentoTipoBotao">
-						<img class="iconeDoc" id="iconeCPF" src="documento/img/IconCPF.png"/>
-						<p class="selecaoDocumentoTipoTexto">CPF</p>
+					<div id="selecaoDocumentoCPF" className="selecaoDocumentoTipoBotao">
+						<img alt="" className="iconeDoc" id="iconeCPF" src="documento/img/IconCPF.png"/>
+						<p className="selecaoDocumentoTipoTexto">CPF</p>
 					</div>
 		
 					</div>
@@ -170,91 +170,91 @@ function DocumentoView(props) {
 		
 			</div>
 		
-			<div id="botaoAcaoEnviar" class="botaoAcao documentoBotaoAcao documentoBotaoAcaoEnviar"><p id="textoBotaoAcaoTutorial" class="textoBotaoAcaoEnviar">ENVIAR</p></div>
+			<div id="botaoAcaoEnviar" className="botaoAcao documentoBotaoAcao documentoBotaoAcaoEnviar"><p id="textoBotaoAcaoTutorial" className="textoBotaoAcaoEnviar">ENVIAR</p></div>
 		</div>
 		
-		<div id="selecaoDocumentoReview" class="selecaoDocumentoReview">
+		<div id="selecaoDocumentoReview" className="selecaoDocumentoReview">
 		</div>
 		
-		<div id="upload" class="uploadContainer">
+		<div id="upload" className="uploadContainer">
 		
-			<div id="uploadManual" class="uploadManualContainer">
-			<input class="hidden" id="docFileInput" type="file" accept="image/jpeg" />
+			<div id="uploadManual" className="uploadManualContainer">
+			<input className="hidden" id="docFileInput" type="file" accept="image/jpeg" />
 		
-			<div id="uploadManualButton" class="uploadManualButton centralizado">
-				<img src="documento/img/IconGallery.png"/>
-				<p class="corBranco">Escolher arquivo</p>
+			<div id="uploadManualButton" className="uploadManualButton centralizado">
+				<img alt="" src="documento/img/IconGallery.png"/>
+				<p className="corBranco">Escolher arquivo</p>
 			</div>
 		
-			<div id="uploadManualCancelar" class="uploadManualCancelar">
-				<img src="documento/img/IconFechar.png" />
+			<div id="uploadManualCancelar" className="uploadManualCancelar">
+				<img alt="" src="documento/img/IconFechar.png" />
 			</div>
-		
-			</div>
-		
-			<div id="uploadAutomatico" class="uploadAutomatico">
-			<div data-role="page" id="capturescreen" class="capturescreen">
 		
 			</div>
 		
-			<div id="uploadAutomaticoCancelar" class="uploadManualCancelar">
-				<img src="documento/img/IconFechar.png" />
+			<div id="uploadAutomatico" className="uploadAutomatico">
+			<div data-role="page" id="capturescreen" className="capturescreen">
+		
+			</div>
+		
+			<div id="uploadAutomaticoCancelar" className="uploadManualCancelar">
+				<img alt="" src="documento/img/IconFechar.png" />
 			</div>
 		
 			</div>
 		</div>
 		
-		<div id="documentoEmAnalise" class="documentoEmAnalise">
-			<div class="centralizado textCenter">
-			<img src="documento/img/IconEmAnalise.png"/>
+		<div id="documentoEmAnalise" className="documentoEmAnalise">
+			<div className="centralizado textCenter">
+			<img alt="" src="documento/img/IconEmAnalise.png"/>
 			<p><b>Em análise</b></p>
 			<p>Aguarde um instante</p>
 			</div>
 		</div>
 		
-		<div id="docReview" class="docReview">
-			<div class="textCenter docPadding">
-			<img id="reviewImagem" src="" class="reviewImagem"/>
+		<div id="docReview" className="docReview">
+			<div className="textCenter docPadding">
+			<img alt="" id="reviewImagem" src="" className="reviewImagem"/>
 			</div>
 		
-			<div class="reviewImagemText">
-			<p><b class="corBranco">Revisar foto.</b></p>
-			<p class="corBranco">A foto está nítida e bem iluminada?<br/>Lembre-se que não pode ter reflexo.</p>
+			<div className="reviewImagemText">
+			<p><b className="corBranco">Revisar foto.</b></p>
+			<p className="corBranco">A foto está nítida e bem iluminada?<br/>Lembre-se que não pode ter reflexo.</p>
 			</div>
 		
-			<div class="reviewImagemBotoes">
-			<div id="botaoAcaoTirarOutra" class="botaoAcaoReview"><p class="textoBotaoAcaoReview">TIRAR OUTRA</p></div>
-			<div id="botaoAcaoFicouBoa" class="botaoAcaoReview botaoAcaoReviewRight"><p class="textoBotaoAcaoReviewPreto">FICOU BOA</p></div>
+			<div className="reviewImagemBotoes">
+			<div id="botaoAcaoTirarOutra" className="botaoAcaoReview"><p className="textoBotaoAcaoReview">TIRAR OUTRA</p></div>
+			<div id="botaoAcaoFicouBoa" className="botaoAcaoReview botaoAcaoReviewRight"><p className="textoBotaoAcaoReviewPreto">FICOU BOA</p></div>
 			</div>
 		
 		</div>
 				
-		<div id="docErro" class="docErro">
-			<div class="centralizado textCenter">
-			<img src="documento/img/DocError.png"/>
-			<p><b class="corPreto">Atenção</b></p>
-			<p class="corPreto" id="docErroText"></p>
+		<div id="docErro" className="docErro">
+			<div className="centralizado textCenter">
+			<img alt="" src="documento/img/DocError.png"/>
+			<p><b className="corPreto">Atenção</b></p>
+			<p className="corPreto" id="docErroText"></p>
 			</div>
 		
-			<div id="botaoAcaoTentarCapturarNovamente" class="documentoBotaoAcao"><p class="textoBotaoAcao centralizado">TENTAR NOVAMENTE</p></div>
+			<div id="botaoAcaoTentarCapturarNovamente" className="documentoBotaoAcao"><p className="textoBotaoAcao centralizado">TENTAR NOVAMENTE</p></div>
 		</div>
 		
-		<div id="documentoRotacioneAparelho" class="documentoRotacioneAparelho">
-			<div class="centralizado textCenter">
-			<img src="documento/img/DocumentoErroRotacione.png"/>
+		<div id="documentoRotacioneAparelho" className="documentoRotacioneAparelho">
+			<div className="centralizado textCenter">
+			<img alt="" src="documento/img/DocumentoErroRotacione.png"/>
 			<p>Rotacione seu aparelho para a vertical</p>
 			</div>
 		</div>
 		
-		<div id="documentoResultado" class="documentoResultado">
-			<div class="centralizado textCenter">
-			<img id="selfieImagemResultado" src="documento/img/DocIconSucesso.png"/>
+		<div id="documentoResultado" className="documentoResultado">
+			<div className="centralizado textCenter">
+			<img alt="" id="selfieImagemResultado" src="documento/img/DocIconSucesso.png"/>
 		
 			<p><b>Pronto!</b></p>
 			<p>Sua foto foi registrada com sucesso.</p>
 			</div>
 		
-			<div id="botaoAcarFinalizarDocumento" class="botaoAcao"><p class="textoBotaoAcao centralizado">FINALIZAR</p></div>
+			<div id="botaoAcarFinalizarDocumento" className="botaoAcao"><p className="textoBotaoAcao centralizado">FINALIZAR</p></div>
 		</div>
 				
 		</div>

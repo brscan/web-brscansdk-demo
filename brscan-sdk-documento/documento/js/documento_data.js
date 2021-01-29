@@ -1,8 +1,8 @@
 var CONFIGURACAO_DOCUMENTOS = {
-    documentoUnico: true,
+    documentoUnico: false,
     documentoCancelavel: false,
     documentoSemCPF: false,
-    documentoSemReview: true,
+    documentoSemReview: false,
     limiteDeTentativasAutomaticas: 0,
     timeOutCapturaAutomatica: 0,
     documentoPath: "documento/img",
@@ -16,6 +16,7 @@ var CONFIGURACAO_DOCUMENTOS = {
           "desc" : "USAR MEU RG",
           "desc_sel" : "Escolha como quer enviar o seu RG",
           "id": "rg",
+          "label" : "selecao-documento-tipo-rg",
           "icones" : {
               "frente" : "/IconRGFrente.png",
               "verso" : "/IconRGVerso.png",
@@ -27,6 +28,7 @@ var CONFIGURACAO_DOCUMENTOS = {
           "desc" : "USAR MINHA CNH",
           "desc_sel" : "Escolha como quer enviar a sua CNH",
           "id" : "cnh",
+          "label" : "selecao-documento-tipo-cnh",
           "icones" : {
               "frente" : "/IconCNHFrente.png",
               "verso" : "/IconCNHVerso.png",
@@ -38,6 +40,7 @@ var CONFIGURACAO_DOCUMENTOS = {
           "desc" : "OUTRO DOCUMENTO",
           "desc_sel" : "Escolha como quer enviar seu documento",
           "id" : "outro",
+          "label" : "selecao-documento-tipo-outro",
           "icones" : {
               "frente" : "/IconOutroDocFrente.png",
               "verso" : "/IconOutroDocVerso.png",
