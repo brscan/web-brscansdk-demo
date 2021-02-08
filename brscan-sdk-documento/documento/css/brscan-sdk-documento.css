@@ -41,20 +41,25 @@
     user-select: none;
 
     display: none;
+    
+    -khtml-overflow-scrolling:touch;
+    -o-overflow-scrolling:touch;
+    -moz-overflow-scrolling:touch;
+    -webkit-overflow-scrolling:touch;
 
-    touch-action: none;
+    overflow-y: scroll;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 p {
     font-size: 14px;
-}
-
-.corGray {
-    color: #333333;
 }
 
 .corBranco {
@@ -63,22 +68,6 @@ p {
 
 .corPreto {
     color: #000;
-}
-
-.escondido {
-    display: none;
-}
-
-.visivel {
-    display: block;
-}
-
-.paginaCompleta {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
 }
 
 .centralizado {
@@ -96,10 +85,9 @@ p {
 .documentoTutorial {
     margin-top: 60px;
     text-align: center;
-
 }
 
-.documentoTutorialIcone {
+.documentoIcone {
     width: 175px;
     height: 175px;
     object-fit: contain;
@@ -124,6 +112,7 @@ p {
 
 .documentoRotacioneAparelho {
     position: absolute;
+    z-index: 99999;
 
     width: 100%;
     height: 100%;
@@ -215,37 +204,10 @@ p {
           transform: translate(-50%,-50%);
 }
 
-.botaoAcaoCancelar {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
 .ID_CAMERA_DIV {
     position:absolute;
     width:100%;
     height:100%;
-}
-
-.loader {
-    border:8px solid #CF352E;
-    border-top: 8px solid transparent;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    animation: spin 2s linear infinite;
-}
-
-.documentoLoading {
-    background-color: var(--cor-primary);
-
-    width: 100%;
-    height: 100%;
-
-    top: 0px;
-    left: 0px;
-
-    position: absolute;
 }
 
 .documentoFechar {
@@ -280,13 +242,14 @@ p {
 }
 
 .selecaoDocumentoTipo {
-
+    overflow-y: hidden;
+    width: 100%;
 }
 
 .selecaoDocumentoTipo h1 {
     color: #fff;
     position: relative;
-    top: 60px;
+    top: 100px;
 
     margin: 0px;
 
@@ -313,7 +276,12 @@ p {
 }
 
 .selecaoDocumentoBotoes {
-    margin-top: 80px;
+    margin-top: 140px;
+}
+
+.selecaoLadoBotoes {
+    margin-top: 162px;
+    margin-bottom: 80px;
 }
 
 .selecaoDocumentoTipoBotao {
@@ -334,11 +302,10 @@ p {
     opacity: 0.5;
 }
 
-.selecaoDocumentoLinha {
-    height:2px;
-}
-
 .selecaoDocumentoLado {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
     width: 100%;
     height: 100%;
 }
@@ -346,28 +313,35 @@ p {
 .textoDocumentoLado {
     font-size: 16px;
     color: #fff;
-    position: absolute;
+
+    position: relative;
+    display: flex;
+    width: auto;
+
     font-weight: normal;
 
     margin: 0px;
 
-    top: 65px;
-    left: 90px;
-
+    padding-top: 0px;
     padding-right: 20px;
 
     text-align: center;
 }
 
+#botaoAcaoRetornarSelecaoDocumento {
+    display: flex;
+}
+
 .botaoAcaoRetornarSelecaoDocumento {
     cursor: pointer;
     position: relative;
+    
+    display: flex;
+    flex-direction: row;
 
-    top: 60px;
+    top: 110px;
 
-    width: 32px;
-    height: 32px;
-
+    width: auto;
     margin-left: 30px;
 }
 
@@ -438,7 +412,9 @@ p {
 }
 
 .iconeDoc {
-    object-fit: scale-down;
+    object-fit: contain;
+    width: 64px;
+    height: 64px;
 }
 
 .uploadAutomatico {
@@ -573,7 +549,7 @@ p {
     height: 260px;
     width: 300px;
 
-    object-fit: scale-down;
+    object-fit: contain;
 }
 
 .reviewImagemText {
@@ -588,6 +564,125 @@ p {
     width: 100%
 }
 
-.scroll-content {
-    height: 100%;
+@media only screen and (max-width:410px) {
+        
+    h1 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .documentoBotaoAcao p{
+        font-size: 12px;
+    }
+
+    .iconeDoc {
+        width: 55px;
+        height: 55px;
+    }
+
+    .textoDocumentoLado {
+        font-size: 16px;
+    }
+    
+    .documentoTutorial {
+        margin-top: 80px;    
+    }
+    
+    .documentoIcone {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .documentoTutorial h1 {
+        font-size: 18px;
+    }
+    
+    .documentoTutorial p {
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (min-width:412px) {
+        
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .documentoBotaoAcao p{
+        font-size: 14px;
+    }
+
+    .iconeDoc {
+        width: 75px;
+        height: 75px;
+    }
+
+    .textoDocumentoLado {
+        font-size: 18px;
+        left: 25px;
+    }
+    
+    .documentoTutorial {
+        margin-top: 80px;    
+    }
+    
+    .documentoIcone {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .documentoTutorial h1 {
+        font-size: 22px;
+    }
+    
+    .documentoTutorial p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:720px) {
+        
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .documentoBotaoAcao p{
+        font-size: 16px;
+    }
+
+    .documentoTutorial {
+        margin-top: 100px;
+    }
+
+    .textoDocumentoLado {
+        font-size: 20px;
+    }
+
+    .iconeDoc {
+        width: 85px;
+    }
+    .documentoIcone {
+        width: 225px;
+        height: 225px;
+    }
+    
+    .documentoTutorial h1 {
+        font-size: 22px;
+    }
+
+    .documentoTutorial p {
+        font-size: 16px;
+    }
 }
