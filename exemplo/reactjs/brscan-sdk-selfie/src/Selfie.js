@@ -32,7 +32,7 @@ appendElement("selfie/js/common/polyfil.js", "script");
 appendElement("selfie/js/common/tinyslider.js", "script");
 
 appendElement("selfie/js/tfjs.js", "script");
-appendElement("https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@2.7.0/dist/tf-backend-wasm.js", "script");
+appendElement("selfie/js/tf-backend-wasm.js", "script");
 appendElement("selfie/js/blazeface.js", "script");
 
 appendElement("selfie/js/selfie_data.js", "script");
