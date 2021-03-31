@@ -64,12 +64,22 @@ function DocumentoView(props) {
 			 	document.getElementById("documentoContainer")
    	   		);
     
-		   documento.iniciaDocumento((documentos) => {
-			documentoSucesso(documentos);
-		   },
-		   (erroId, erro) => {
-				documentoErro(erroId, erro)
-		   });
+		   documento.iniciaDocumento(
+			(documentos) => {
+				documentoSucesso(documentos);
+		   	},
+
+			(erroId, erro) => {
+					documentoErro(erroId, erro)
+			},
+
+			// ESCONDE TUTORIAL
+			false,
+
+			// CALLBACK SELECAO DE DOCUMENTO
+			(tipo, lado, documento) => {
+				console.log(tipo, lado, documento);
+			});
         }
         catch(erro) {
         	console.log(erro);
@@ -130,9 +140,8 @@ function DocumentoView(props) {
 					<p className="selecaoDocumentoTipoTexto">FOTO DA FRENTE</p>
 					</div>
 		
-		
 					<div id="selecaoDocumentoVerso" className="selecaoDocumentoTipoBotao">
-					<div className="selecaoDocumentoTipoLinha">
+						<div className="selecaoDocumentoTipoLinha">
 					</div>
 		
 					<img alt="" alt="" className="iconeDoc" id="iconeVerso" src=""/>
@@ -194,7 +203,9 @@ function DocumentoView(props) {
 		
 			<div id="uploadAutomatico" className="uploadAutomatico">
 			<div data-role="page" id="capturescreen" className="capturescreen">
-		
+				<div id="ID_CAMERA_DIV" className="ID_CAMERA_DIV">
+              
+			  </div>
 			</div>
 		
 			<div id="uploadAutomaticoCancelar" className="uploadManualCancelar">
