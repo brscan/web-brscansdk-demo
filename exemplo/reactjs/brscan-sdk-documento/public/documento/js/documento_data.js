@@ -2,9 +2,10 @@ var CONFIGURACAO_DOCUMENTOS = {
     documentoUnico: false,
     documentoCancelavel: false,
     documentoSemCPF: false,
-    documentoSemReview: false,
+    documentoSemReview: true,
     limiteDeTentativasAutomaticas: 0,
     timeOutCapturaAutomatica: 0,
+    timeOutValidaCaptura: 10000, // 10 segundos
     documentoPath: "documento/img",
     aceiteUploadManual: "image/jpeg,application/pdf",
     aceiteUploadManualCamera: true,
