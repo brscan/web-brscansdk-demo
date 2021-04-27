@@ -144,3 +144,10 @@ try {
 ## Versionamento
 
 Nós usamos [Github](https://github.com/) para versionar. Para as versões disponíveis, veja as [tags do repositório](https://github.com/brscan/web-brscansdk-demo). 
+
+## Change log
+
+26/04/2021 -
+Melhoria - *Inclusão configuração de timeout para a validação de documentos*; Agora é possível iniciar um tempo de timeout para o request de validação de documento através do parametro: timeOutValidaCaptura que se encontra no arquivo documento_data.js
+Melhoria - *Agora o botão de captura manual de documento é habilitado durante o inicio da captura automática.*
+
